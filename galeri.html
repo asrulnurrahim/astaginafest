@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri - Astagina Fest</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'astagina-green': '#4f7942',
+                        'astagina-green-dark': '#3a5c31',
+                        'astagina-brown': '#8b5a2b',
+                        'astagina-cream': '#fbf9f6',
+                        'astagina-orange': '#d2691e',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="antialiased bg-astagina-cream">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar scrolled !bg-astagina-cream !shadow-sm !py-3">
+        <div class="container-custom flex justify-between items-center w-full">
+            <!-- Left Logo Block -->
+            <div class="flex-1 flex justify-start">
+                <a href="index.html" class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-astagina-green rounded-xl flex items-center justify-center text-white shrink-0 shadow-inner">
+                        <i data-lucide="sprout" class="w-5 h-5 text-yellow-400"></i>
+                    </div>
+                    <div class="flex flex-col text-left">
+                        <span class="font-bold logo-title text-astagina-green-dark leading-tight text-sm md:text-base">Popdarwis Astagina</span>
+                        <span class="text-[10px] md:text-xs logo-subtitle text-astagina-orange leading-tight font-medium">Festival Budaya Wong Tani</span>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Center Menu (Desktop) -->
+            <div class="hidden lg:flex justify-center items-center gap-6">
+                <a href="tentang.html" class="nav-link !text-gray-800 hover:!text-astagina-orange">Tentang</a>
+                <a href="jadwal.html" class="nav-link !text-gray-800 hover:!text-astagina-orange">Jadwal</a>
+                <a href="index.html#pengisi" class="nav-link !text-gray-800 hover:!text-astagina-orange">Pengisi Acara</a>
+                <a href="stand.html" class="nav-link !text-gray-800 hover:!text-astagina-orange">Stand</a>
+                <a href="index.html#merch" class="nav-link !text-gray-800 hover:!text-astagina-orange">Merchandise</a>
+                <a href="galeri.html" class="nav-link !text-astagina-orange font-semibold">Galeri</a>
+                <a href="lokasi.html" class="nav-link !text-gray-800 hover:!text-astagina-orange">Lokasi</a>
+            </div>
+            
+            <!-- Right CTA Button (Desktop) -->
+            <div class="flex-1 hidden lg:flex justify-end">
+                <a href="lokasi.html" class="bg-astagina-orange hover:bg-opacity-90 text-white font-bold px-6 py-2.5 rounded-full text-sm transition shadow-sm">Hubungi Kami</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="lg:hidden text-gray-800 focus:outline-none ml-auto">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-50 flex-col px-6 py-8 hidden">
+        <div class="flex justify-between items-center mb-10">
+            <span class="text-astagina-green-dark font-bold text-xl" style="font-family: 'Playfair Display', serif;">Astagina Fest</span>
+            <button id="mobile-menu-close" class="text-gray-800 focus:outline-none">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+        </div>
+        <div class="flex flex-col gap-5 text-lg font-medium text-gray-800">
+            <a href="index.html" class="hover:text-astagina-orange">Beranda</a>
+            <a href="tentang.html" class="hover:text-astagina-orange">Tentang</a>
+            <a href="jadwal.html" class="hover:text-astagina-orange">Jadwal</a>
+            <a href="index.html#pengisi" class="hover:text-astagina-orange">Pengisi Acara</a>
+            <a href="stand.html" class="hover:text-astagina-orange">Stand</a>
+            <a href="index.html#merch" class="hover:text-astagina-orange">Merchandise</a>
+            <a href="galeri.html" class="text-astagina-orange font-semibold">Galeri</a>
+            <a href="lokasi.html" class="hover:text-astagina-orange">Lokasi</a>
+            <a href="lokasi.html" class="bg-astagina-orange text-white text-center font-bold py-3 rounded-full text-sm mt-4 shadow-sm">Hubungi Kami</a>
+        </div>
+    </div>
+
+    <header class="pt-32 pb-12 bg-white text-center border-b border-gray-200">
+        <div class="container-custom" data-aos="fade-up">
+            <h1 class="font-['Playfair_Display'] text-4xl md:text-5xl font-bold text-astagina-green-dark mb-4">Galeri Momen</h1>
+            <p class="text-gray-600 text-lg">Kilas balik kehangatan dan kemeriahan Astagina Fest.</p>
+        </div>
+    </header>
+
+    <!-- Carousel Highlight -->
+    <section class="py-12 bg-astagina-green-dark">
+        <div class="container-custom">
+            <!-- Swiper -->
+            <div class="swiper gallery-swiper rounded-2xl overflow-hidden shadow-2xl">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide h-80">
+                        <img src="assets/img/hero/hero.png" alt="Suasana Festival" class="w-full h-full object-cover">
+                    </div>
+                    <div class="swiper-slide h-80">
+                        <img src="assets/img/gallery/2.png" alt="Pertunjukan" class="w-full h-full object-cover">
+                    </div>
+                    <div class="swiper-slide h-80">
+                        <img src="assets/img/gallery/1.png" alt="Petani" class="w-full h-full object-cover">
+                    </div>
+                    <div class="swiper-slide h-80">
+                        <img src="assets/img/tenant/2.png" alt="Kopi" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Navigation -->
+                <div class="swiper-button-prev !text-white after:!text-2xl drop-shadow-md"></div>
+                <div class="swiper-button-next !text-white after:!text-2xl drop-shadow-md"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Grid -->
+    <section class="section-padding bg-astagina-cream">
+        <div class="container-custom">
+            <h2 class="section-title mb-10" data-aos="fade-up">Koleksi Foto</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6" id="gallery-container">
+                <!-- Gallery items - using simple image tags for no-build simplicity -->
+                <div class="img-wrapper shadow-sm" data-aos="fade-up">
+                    <img src="assets/img/gallery/1.png" alt="Panen" class="w-full h-64 object-cover cursor-pointer">
+                </div>
+                <div class="img-wrapper shadow-sm" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/img/gallery/2.png" alt="Seni Budaya" class="w-full h-64 object-cover cursor-pointer">
+                </div>
+                <div class="img-wrapper shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/img/gallery/3.png" alt="Kerajinan" class="w-full h-64 object-cover cursor-pointer">
+                </div>
+                <div class="img-wrapper shadow-sm" data-aos="fade-up">
+                    <img src="assets/img/tenant/1.png" alt="Kuliner" class="w-full h-64 object-cover cursor-pointer">
+                </div>
+                <div class="img-wrapper shadow-sm" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/img/tenant/2.png" alt="Kopi Organik" class="w-full h-64 object-cover cursor-pointer">
+                </div>
+                <div class="img-wrapper shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/img/hero/hero.png" alt="Suasana" class="w-full h-64 object-cover cursor-pointer">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Include Footer -->
+    <footer class="bg-gray-900 text-white pt-12 pb-8 border-t-4 border-astagina-green">
+        <div class="container-custom text-center">
+            <img src="assets/img/logo/logo.png" alt="Astagina Fest" class="h-10 w-auto rounded-lg bg-white p-1 mx-auto mb-4">
+            <p class="text-gray-400 text-sm mb-6">Astagina Fest 2026. Merayakan Harmoni Alam.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
