@@ -260,3 +260,19 @@ h1, h2, h3, h4, h5, h6 {
 #navbar:not(.scrolled) .navbar-logo-dark {
   display: none !important;
 }
+
+/* Slow Pulse Animation for Festival Logo */
+.animate-pulse-slow {
+  animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: .92;
+    transform: scale(1.03);
+  }
+}
