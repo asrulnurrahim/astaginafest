@@ -97,15 +97,100 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Initialize PhotoSwipe (Lightbox)
-    // Simplified setup for static pages
-    const lightboxGallery = document.querySelectorAll('.lightbox-link');
-    if (lightboxGallery.length > 0 && typeof PhotoSwipeLightbox !== 'undefined') {
-        const lightbox = new PhotoSwipeLightbox({
-            gallery: '#gallery-container',
-            children: 'a',
-            pswpModule: () => window.PhotoSwipe
+    // === PREMIUM LIGHTBOX IMAGE PREVIEW MODAL ===
+    // Select all potential previewable images (Gallery & Merchandise)
+    const previewableImages = document.querySelectorAll('.img-wrapper img, .grid-cols-2 img, .lightbox-link img');
+    
+    if (previewableImages.length > 0) {
+        // Create Lightbox Container DOM Elements
+        const lightboxOverlay = document.createElement('div');
+        lightboxOverlay.className = 'fixed inset-0 z-[9999] bg-black/90 backdrop-blur-md flex flex-col items-center justify-center opacity-0 pointer-events-none transition-all duration-300 ease-in-out';
+        lightboxOverlay.id = 'premium-lightbox';
+
+        // Close Button
+        const closeBtn = document.createElement('button');
+        closeBtn.className = 'absolute top-6 right-6 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 p-3 rounded-full transition-all duration-300 focus:outline-none';
+        closeBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>';
+        
+        // Image Element
+        const lightboxImg = document.createElement('img');
+        lightboxImg.className = 'max-w-[90%] max-h-[75vh] md:max-h-[80vh] rounded-xl object-contain shadow-2xl scale-95 transition-all duration-300 ease-out border border-white/10';
+        
+        // Caption Text
+        const lightboxCaption = document.createElement('p');
+        lightboxCaption.className = 'text-white/90 text-center font-medium mt-6 text-base md:text-lg tracking-wide max-w-[80%] uppercase font-[\'Outfit\']';
+
+        // Assemble Lightbox DOM
+        lightboxOverlay.appendChild(closeBtn);
+        lightboxOverlay.appendChild(lightboxImg);
+        lightboxOverlay.appendChild(lightboxCaption);
+        document.body.appendChild(lightboxOverlay);
+
+        // Open Lightbox Function
+        const openLightbox = (imgSrc, imgAlt) => {
+            lightboxImg.src = imgSrc;
+            lightboxCaption.textContent = imgAlt || 'Detail Produk';
+            
+            // Show overlay
+            lightboxOverlay.classList.remove('pointer-events-none', 'opacity-0');
+            lightboxOverlay.classList.add('opacity-100');
+            
+            // Zoom-in animation for image
+            setTimeout(() => {
+                lightboxImg.classList.remove('scale-95');
+                lightboxImg.classList.add('scale-100');
+            }, 50);
+
+            // Prevent scrolling on background
+            document.body.classList.add('overflow-hidden');
+        };
+
+        // Close Lightbox Function
+        const closeLightbox = () => {
+            // Zoom-out image
+            lightboxImg.classList.remove('scale-100');
+            lightboxImg.classList.add('scale-95');
+            
+            // Fade-out overlay
+            lightboxOverlay.classList.remove('opacity-100');
+            lightboxOverlay.classList.add('opacity-0', 'pointer-events-none');
+            
+            // Allow scrolling again
+            document.body.classList.remove('overflow-hidden');
+        };
+
+        // Bind Click Events
+        previewableImages.forEach(img => {
+            img.classList.add('cursor-pointer');
+            
+            // Subtle premium zoom-in hover styling on image itself
+            img.style.transition = 'transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), filter 0.4s ease';
+            img.addEventListener('mouseenter', () => {
+                img.style.filter = 'brightness(1.05)';
+            });
+            img.addEventListener('mouseleave', () => {
+                img.style.filter = 'none';
+            });
+
+            img.addEventListener('click', (e) => {
+                e.preventDefault();
+                openLightbox(img.src, img.alt);
+            });
         });
-        lightbox.init();
+
+        // Close when clicking Close Button or dark backdrop
+        closeBtn.addEventListener('click', closeLightbox);
+        lightboxOverlay.addEventListener('click', (e) => {
+            if (e.target === lightboxOverlay) {
+                closeLightbox();
+            }
+        });
+
+        // Close when pressing Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !lightboxOverlay.classList.contains('pointer-events-none')) {
+                closeLightbox();
+            }
+        });
     }
 });

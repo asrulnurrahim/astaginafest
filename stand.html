@@ -89,63 +89,292 @@
     </div>
 
     <!-- Header -->
-    <header class="pt-32 pb-12 bg-astagina-cream text-center border-b border-gray-200">
-        <div class="container-custom" data-aos="fade-up">
-            <h1 class="font-['Playfair_Display'] text-4xl md:text-5xl font-bold text-astagina-green-dark mb-4">Daftar Tenant & UMKM</h1>
-            <p class="text-gray-600 text-lg max-w-2xl mx-auto">Dukung produk lokal berkualitas dari hasil bumi hingga kerajinan tangan.</p>
+    <header class="pt-32 pb-16 bg-astagina-cream text-center relative overflow-hidden">
+        <!-- Background subtle patterns -->
+        <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle at 20% 30%, var(--astagina-green) 1px, transparent 1px), radial-gradient(circle at 75% 80%, var(--astagina-green) 1px, transparent 1px); background-size: 24px 24px;"></div>
+        
+        <div class="container-custom relative z-10" data-aos="fade-up">
+            <span class="text-xs font-bold text-astagina-orange uppercase tracking-widest mb-3 block">Kesempatan Emas Tenant UMKM & Bisnis</span>
+            <h1 class="font-['Playfair_Display'] text-4xl md:text-5xl font-bold text-astagina-green-dark mb-4">Stan Festival Budaya</h1>
+            <p class="text-gray-600 text-base md:text-lg max-w-3xl mx-auto px-4 leading-relaxed font-['Outfit']">
+                Pilih paket stan yang sesuai dengan kebutuhan bisnis Anda dan raih kesempatan emas untuk menjangkau <span class="font-bold text-astagina-orange text-lg">50.000+ pengunjung</span> potensial di perayaan akbar Festival Budaya Wong Tani #2.
+            </p>
         </div>
     </header>
 
-    <!-- Tenant Grid -->
-    <section class="section-padding">
-        <div class="container-custom">
-            <!-- Filter (Visual Dummy) -->
-            <div class="flex flex-wrap justify-center gap-4 mb-12" data-aos="fade-up">
-                <span class="bg-astagina-green text-white px-5 py-2 rounded-full font-medium shadow-sm cursor-pointer">Semua</span>
-                <span class="bg-white text-gray-600 border border-gray-200 px-5 py-2 rounded-full font-medium hover:border-astagina-green cursor-pointer transition">Hasil Bumi</span>
-                <span class="bg-white text-gray-600 border border-gray-200 px-5 py-2 rounded-full font-medium hover:border-astagina-green cursor-pointer transition">Kuliner</span>
-                <span class="bg-white text-gray-600 border border-gray-200 px-5 py-2 rounded-full font-medium hover:border-astagina-green cursor-pointer transition">Kerajinan</span>
+    <!-- Packages Grid -->
+    <section class="pb-24 bg-gray-50/50">
+        <div class="container-custom px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch max-w-6xl mx-auto">
+                
+                <!-- VVIP Card (Neutral) -->
+                <div class="bg-white rounded-3xl border border-gray-200 shadow-sm p-6 md:p-8 flex flex-col justify-between relative hover:shadow-md transition-all duration-300 transform hover:-translate-y-1" data-aos="fade-up">
+                    <div class="text-center pt-4 mb-8">
+                        <span class="bg-gray-100 text-gray-600 border border-gray-200 px-4 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase">Paket Eksklusif</span>
+                        <h3 class="text-3xl font-extrabold text-gray-800 mt-4 mb-2 font-['Playfair_Display']">VVIP</h3>
+                        <div class="text-2xl md:text-3xl font-black text-astagina-green-dark">Rp 15.000.000</div>
+                        <span class="text-xs text-gray-400 font-medium">per booth / festival</span>
+                    </div>
+                    
+                    <ul class="flex flex-col gap-3.5 mb-8 border-t border-gray-100 pt-6 font-['Outfit'] text-sm md:text-base text-gray-600">
+                        <li class="flex items-start gap-2.5">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0 mt-0.5"></i>
+                            <span><strong>Ukuran booth 6x6 meter</strong> (lokasi premium utama)</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0 mt-0.5"></i>
+                            <span>Desain & dekorasi booth eksklusif</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0 mt-0.5"></i>
+                            <span>Branding di semua media promosi festival</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0 mt-0.5"></i>
+                            <span>Kapasitas listrik <strong>3000 Watt</strong></span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0 mt-0.5"></i>
+                            <span>Meja, kursi, dan rak display premium</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0 mt-0.5"></i>
+                            <span>Backdrop custom dengan logo brand</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0 mt-0.5"></i>
+                            <span>Spot iklan di panggung utama (3x sehari)</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0 mt-0.5"></i>
+                            <span>Akses VIP untuk 5 orang</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0 mt-0.5"></i>
+                            <span>Parkir khusus untuk 2 mobil</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0 mt-0.5"></i>
+                            <span>Dokumentasi profesional booth</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="https://wa.me/6281217892683?text=Halo%20Panitia%20Astagina%20Fest,%20saya%20tertarik%20memesan%20Paket%20Stan%20VVIP%20(Rp%2015.000.000)" target="_blank" class="w-full flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#20BA5A] text-white font-bold py-3.5 px-6 rounded-full transition shadow-md font-['Outfit'] mt-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="w-6 h-6 shrink-0" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.851 9.851 0 0 1-5.024-1.361l-.36-.214-3.741.982.998-3.648-.235-.374a9.865 9.865 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.955c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.549 4.142 1.594 5.945L0 24l6.337-1.664a11.884 11.884 0 0 0 5.71 1.457h.006c6.555 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.473-8.413"/>
+                        </svg>
+                        <span>Pesan via WhatsApp</span>
+                    </a>
+                </div>
+
+                <!-- VIP Card (Highlighted - Paling Populer) -->
+                <div class="bg-white rounded-3xl border-4 border-astagina-orange shadow-lg p-6 md:p-8 flex flex-col justify-between relative hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 z-10" data-aos="fade-up" data-aos-delay="100">
+                    <!-- Badge Paling Populer -->
+                    <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-astagina-orange text-white text-xs font-bold tracking-widest px-6 py-2 rounded-full uppercase shadow-md border-2 border-white">
+                        Paling Populer
+                    </div>
+                    
+                    <div class="text-center pt-4 mb-8">
+                        <span class="bg-astagina-orange/10 text-astagina-orange border border-astagina-orange/30 px-4 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase">Pilihan Utama</span>
+                        <h3 class="text-3xl font-extrabold text-gray-800 mt-4 mb-2 font-['Playfair_Display']">VIP</h3>
+                        <div class="text-2xl md:text-3xl font-black text-astagina-green-dark">Rp 8.500.000</div>
+                        <span class="text-xs text-gray-400 font-medium">per booth / festival</span>
+                    </div>
+                    
+                    <ul class="flex flex-col gap-3.5 mb-8 border-t border-gray-100 pt-6 font-['Outfit'] text-sm md:text-base text-gray-600">
+                        <li class="flex items-start gap-2.5">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-astagina-orange shrink-0 mt-0.5"></i>
+                            <span><strong>Ukuran booth 4x4 meter</strong> (lokasi strategis)</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-astagina-orange shrink-0 mt-0.5"></i>
+                            <span>Desain booth standar dengan branding</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-astagina-orange shrink-0 mt-0.5"></i>
+                            <span>Logo di banner utama festival</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-astagina-orange shrink-0 mt-0.5"></i>
+                            <span>Kapasitas listrik <strong>2000 Watt</strong></span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-astagina-orange shrink-0 mt-0.5"></i>
+                            <span>Meja, kursi, dan rak display</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-astagina-orange shrink-0 mt-0.5"></i>
+                            <span>Backdrop dengan logo brand</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-astagina-orange shrink-0 mt-0.5"></i>
+                            <span>Spot iklan di panggung (1x sehari)</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-astagina-orange shrink-0 mt-0.5"></i>
+                            <span>Akses VIP untuk 3 orang</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-astagina-orange shrink-0 mt-0.5"></i>
+                            <span>Parkir khusus untuk 1 mobil</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="https://wa.me/6281217892683?text=Halo%20Panitia%20Astagina%20Fest,%20saya%20tertarik%20memesan%20Paket%20Stan%20VIP%20(Rp%208.500.000)" target="_blank" class="w-full flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#20BA5A] text-white font-bold py-3.5 px-6 rounded-full transition shadow-md font-['Outfit'] mt-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="w-6 h-6 shrink-0" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.851 9.851 0 0 1-5.024-1.361l-.36-.214-3.741.982.998-3.648-.235-.374a9.865 9.865 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.955c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.549 4.142 1.594 5.945L0 24l6.337-1.664a11.884 11.884 0 0 0 5.71 1.457h.006c6.555 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.473-8.413"/>
+                        </svg>
+                        <span>Pesan via WhatsApp</span>
+                    </a>
+                </div>
+
+                <!-- Reguler Card (Neutral) -->
+                <div class="bg-white rounded-3xl border border-gray-200 shadow-sm p-6 md:p-8 flex flex-col justify-between relative hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-center pt-4 mb-8">
+                        <span class="bg-gray-100 text-gray-600 border border-gray-200 px-4 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase">Pilihan Hemat</span>
+                        <h3 class="text-3xl font-extrabold text-gray-800 mt-4 mb-2 font-['Playfair_Display']">Reguler</h3>
+                        <div class="text-2xl md:text-3xl font-black text-astagina-green-dark">Rp 4.500.000</div>
+                        <span class="text-xs text-gray-400 font-medium">per booth / festival</span>
+                    </div>
+                    
+                    <ul class="flex flex-col gap-3.5 mb-8 border-t border-gray-100 pt-6 font-['Outfit'] text-sm md:text-base text-gray-600">
+                        <li class="flex items-start gap-2.5">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0 mt-0.5"></i>
+                            <span><strong>Ukuran booth 3x3 meter</strong></span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0 mt-0.5"></i>
+                            <span>Desain booth standar</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0 mt-0.5"></i>
+                            <span>Listrik <strong>1000 Watt</strong></span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0 mt-0.5"></i>
+                            <span>Meja dan kursi standar</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0 mt-0.5"></i>
+                            <span>Backdrop sederhana</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0 mt-0.5"></i>
+                            <span>Akses untuk 2 orang</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0 mt-0.5"></i>
+                            <span>Akses parkir umum</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="https://wa.me/6281217892683?text=Halo%20Panitia%20Astagina%20Fest,%20saya%20tertarik%20memesan%20Paket%20Stan%20Reguler%20(Rp%204.500.000)" target="_blank" class="w-full flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#20BA5A] text-white font-bold py-3.5 px-6 rounded-full transition shadow-md font-['Outfit'] mt-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="w-6 h-6 shrink-0" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.851 9.851 0 0 1-5.024-1.361l-.36-.214-3.741.982.998-3.648-.235-.374a9.865 9.865 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.955c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.549 4.142 1.594 5.945L0 24l6.337-1.664a11.884 11.884 0 0 0 5.71 1.457h.006c6.555 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.473-8.413"/>
+                        </svg>
+                        <span>Pesan via WhatsApp</span>
+                    </a>
+                </div>
+
             </div>
+        </div>
+    </section>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Tenant 1 -->
-                <div class="event-card" data-aos="fade-up">
-                    <img src="assets/img/tenant/1.png" alt="Warung Bu Tini" class="w-full h-56 object-cover">
-                    <div class="p-6">
-                        <span class="text-xs font-bold text-astagina-orange uppercase tracking-wider mb-2 block">Kuliner Nusantara</span>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-2 font-['Playfair_Display']">Warung Kayu Bu Tini</h3>
-                        <p class="text-gray-600 mb-4">Menyajikan hidangan tradisional otentik dengan resep turun temurun menggunakan bahan organik lokal.</p>
-                        <div class="flex items-center gap-2 text-sm text-gray-500 border-t border-gray-100 pt-4">
-                            <i data-lucide="map-pin" class="w-4 h-4"></i> Zona Kuliner - Booth K01
+    <!-- Keuntungan Tenant Section -->
+    <section class="py-20 bg-astagina-cream border-t border-b border-astagina-green/20">
+        <div class="container-custom max-w-5xl px-4" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-astagina-green-dark text-center mb-12 font-['Playfair_Display']">
+                Keuntungan Menjadi Tenant
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Benefit Card Left Col -->
+                <div class="space-y-6">
+                    <div class="flex gap-4 items-start bg-white p-5 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition duration-300">
+                        <div class="bg-astagina-orange/10 p-2.5 rounded-xl text-astagina-orange shrink-0">
+                            <i data-lucide="users" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-1.5 font-['Outfit']">Jangkauan Pengunjung Maksimal</h4>
+                            <p class="text-gray-600 text-sm leading-relaxed">Akses ke 50.000+ pengunjung potensial selama 3 hari festival berlangsung.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-4 items-start bg-white p-5 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition duration-300">
+                        <div class="bg-astagina-orange/10 p-2.5 rounded-xl text-astagina-orange shrink-0">
+                            <i data-lucide="megaphone" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-1.5 font-['Outfit']">Promosi Media Sosial Gratis</h4>
+                            <p class="text-gray-600 text-sm leading-relaxed">Promosi gratis di media sosial resmi festival dengan jangkauan luas.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-4 items-start bg-white p-5 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition duration-300">
+                        <div class="bg-astagina-orange/10 p-2.5 rounded-xl text-astagina-orange shrink-0">
+                            <i data-lucide="git-merge" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-1.5 font-['Outfit']">Networking UMKM & Pebisnis</h4>
+                            <p class="text-gray-600 text-sm leading-relaxed">Membangun kemitraan dan networking dengan pelaku UMKM dan pengusaha lainnya.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-4 items-start bg-white p-5 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition duration-300">
+                        <div class="bg-astagina-orange/10 p-2.5 rounded-xl text-astagina-orange shrink-0">
+                            <i data-lucide="handshake" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-1.5 font-['Outfit']">Kolaborasi Brand & Sponsor</h4>
+                            <p class="text-gray-600 text-sm leading-relaxed">Kesempatan kolaborasi emas dengan brand besar dan sponsor utama festival.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Tenant 2 -->
-                <div class="event-card" data-aos="fade-up" data-aos-delay="100">
-                    <img src="assets/img/tenant/2.png" alt="Kopi Bumi" class="w-full h-56 object-cover">
-                    <div class="p-6">
-                        <span class="text-xs font-bold text-astagina-green uppercase tracking-wider mb-2 block">Kopi & Minuman</span>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-2 font-['Playfair_Display']">Kopi Bumi Organik</h3>
-                        <p class="text-gray-600 mb-4">Nikmati racikan kopi asli dari perkebunan dataran tinggi yang diproses secara manual dan ramah lingkungan.</p>
-                        <div class="flex items-center gap-2 text-sm text-gray-500 border-t border-gray-100 pt-4">
-                            <i data-lucide="map-pin" class="w-4 h-4"></i> Zona Santai - Booth S04
+                <!-- Benefit Card Right Col -->
+                <div class="space-y-6">
+                    <div class="flex gap-4 items-start bg-white p-5 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition duration-300">
+                        <div class="bg-astagina-orange/10 p-2.5 rounded-xl text-astagina-orange shrink-0">
+                            <i data-lucide="life-buoy" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-1.5 font-['Outfit']">Dukungan Penuh Panitia</h4>
+                            <p class="text-gray-600 text-sm leading-relaxed">Dukungan penuh tim panitia yang sigap selama seluruh rangkaian festival berlangsung.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-4 items-start bg-white p-5 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition duration-300">
+                        <div class="bg-astagina-orange/10 p-2.5 rounded-xl text-astagina-orange shrink-0">
+                            <i data-lucide="shield-check" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-1.5 font-['Outfit']">Keamanan 24 Jam</h4>
+                            <p class="text-gray-600 text-sm leading-relaxed">Keamanan ketat 24 jam nonstop untuk menjaga keamanan stan dan produk Anda.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-4 items-start bg-white p-5 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition duration-300">
+                        <div class="bg-astagina-orange/10 p-2.5 rounded-xl text-astagina-orange shrink-0">
+                            <i data-lucide="sparkles" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-1.5 font-['Outfit']">Fasilitas Penunjang Lengkap</h4>
+                            <p class="text-gray-600 text-sm leading-relaxed">Fasilitas lengkap pendukung termasuk toilet bersih, mushola, dan area parkir luas.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-4 items-start bg-white p-5 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition duration-300">
+                        <div class="bg-astagina-orange/10 p-2.5 rounded-xl text-astagina-orange shrink-0">
+                            <i data-lucide="camera" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-1.5 font-['Outfit']">Dokumentasi Profesional Booth</h4>
+                            <p class="text-gray-600 text-sm leading-relaxed">Dokumentasi profesional stan Anda untuk menunjang promosi pasca-festival.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Tenant 3 -->
-                <div class="event-card" data-aos="fade-up" data-aos-delay="200">
-                    <img src="assets/img/gallery/3.png" alt="Kriya Kayu" class="w-full h-56 object-cover">
-                    <div class="p-6">
-                        <span class="text-xs font-bold text-astagina-brown uppercase tracking-wider mb-2 block">Kerajinan</span>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-2 font-['Playfair_Display']">Kriya Kayu Lembang</h3>
-                        <p class="text-gray-600 mb-4">Peralatan makan dan dekorasi rumah berbahan dasar kayu sisa produksi yang disulap menjadi karya seni.</p>
-                        <div class="flex items-center gap-2 text-sm text-gray-500 border-t border-gray-100 pt-4">
-                            <i data-lucide="map-pin" class="w-4 h-4"></i> Zona Kriya - Booth R12
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -158,21 +387,33 @@
                 <div class="flex items-center gap-3 mb-4">
                     <img src="assets/img/logo/logo.png" alt="Logo Wong Tani" class="w-12 h-12 rounded-xl bg-white p-1 object-contain">
                     <div class="flex flex-col text-left">
-                        <span class="font-bold text-[#EAB308] leading-tight text-lg font-['Playfair_Display']">Wong Tani 2</span>
-                        <span class="text-xs text-gray-400 font-medium">Festival Budaya</span>
+                        <span class="font-bold text-[#EAB308] leading-tight text-lg font-['Playfair_Display']">Popdarwis Astagina</span>
+                        <span class="text-xs text-gray-400 font-medium">Festival Budaya Wong Tani #2</span>
                     </div>
                 </div>
                 <p class="text-gray-400 text-sm mb-6 leading-relaxed font-['Outfit']">
                     Merayakan kekayaan budaya Nusantara dan memberdayakan UMKM lokal melalui festival yang meriah dan bermakna.
                 </p>
-                <!-- Social media icons in rounded yellow-orange circles -->
-                <div class="flex flex-wrap gap-2.5">
-                    <a href="#" class="w-8 h-8 rounded-full bg-[#EAB308] text-[#171717] hover:bg-white hover:text-[#EAB308] flex items-center justify-center transition-all duration-300"><i data-lucide="twitter" class="w-4 h-4"></i></a>
-                    <a href="#" class="w-8 h-8 rounded-full bg-[#EAB308] text-[#171717] hover:bg-white hover:text-[#EAB308] flex items-center justify-center transition-all duration-300"><i data-lucide="facebook" class="w-4 h-4"></i></a>
-                    <a href="#" class="w-8 h-8 rounded-full bg-[#EAB308] text-[#171717] hover:bg-white hover:text-[#EAB308] flex items-center justify-center transition-all duration-300"><i data-lucide="instagram" class="w-4 h-4"></i></a>
-                    <a href="#" class="w-8 h-8 rounded-full bg-[#EAB308] text-[#171717] hover:bg-white hover:text-[#EAB308] flex items-center justify-center transition-all duration-300"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
-                    <a href="#" class="w-8 h-8 rounded-full bg-[#EAB308] text-[#171717] hover:bg-white hover:text-[#EAB308] flex items-center justify-center transition-all duration-300"><i data-lucide="youtube" class="w-4 h-4"></i></a>
-                    <a href="#" class="w-8 h-8 rounded-full bg-[#EAB308] text-[#171717] hover:bg-white hover:text-[#EAB308] flex items-center justify-center transition-all duration-300"><i data-lucide="music-4" class="w-4 h-4"></i></a>
+                <!-- Social media buttons with premium individual brand colors and animations -->
+                <div class="flex flex-wrap gap-3">
+                    <a href="#" class="w-10 h-10 rounded-xl bg-neutral-800/80 border border-neutral-700/50 text-[#EAB308] hover:bg-black hover:border-neutral-600 hover:text-white hover:-translate-y-1 hover:shadow-[0_4px_12px_rgba(0,0,0,0.5)] flex items-center justify-center transition-all duration-300" title="Twitter">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-xl bg-neutral-800/80 border border-neutral-700/50 text-[#EAB308] hover:bg-[#1877F2] hover:border-transparent hover:text-white hover:-translate-y-1 hover:shadow-[0_4px_12px_rgba(24,119,242,0.3)] flex items-center justify-center transition-all duration-300" title="Facebook">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.8z"/></svg>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-xl bg-neutral-800/80 border border-neutral-700/50 text-[#EAB308] hover:bg-gradient-to-tr hover:from-[#f9ce34] hover:via-[#ee2a7b] hover:to-[#6228d7] hover:border-transparent hover:text-white hover:-translate-y-1 hover:shadow-[0_4px_12px_rgba(238,42,123,0.3)] flex items-center justify-center transition-all duration-300" title="Instagram">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-xl bg-neutral-800/80 border border-neutral-700/50 text-[#EAB308] hover:bg-[#0A66C2] hover:border-transparent hover:text-white hover:-translate-y-1 hover:shadow-[0_4px_12px_rgba(10,102,194,0.3)] flex items-center justify-center transition-all duration-300" title="LinkedIn">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-xl bg-neutral-800/80 border border-neutral-700/50 text-[#EAB308] hover:bg-[#FF0000] hover:border-transparent hover:text-white hover:-translate-y-1 hover:shadow-[0_4px_12px_rgba(255,0,0,0.3)] flex items-center justify-center transition-all duration-300" title="YouTube">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.108C19.53 3.5 12 3.5 12 3.5s-7.53 0-9.388.555A3.002 3.002 0 0 0 .502 6.163C0 8.07 0 12 0 12s0 3.93.502 5.837a3.003 3.003 0 0 0 2.11 2.108C4.47 20.5 12 20.5 12 20.5s7.53 0 9.388-.555a3.003 3.003 0 0 0 2.11-2.108C24 15.93 24 12 24 12s0-3.93-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-xl bg-neutral-800/80 border border-neutral-700/50 text-[#EAB308] hover:bg-black hover:border-[#FE2C55] hover:text-white hover:-translate-y-1 hover:shadow-[0_4px_12px_rgba(254,44,85,0.3)] flex items-center justify-center transition-all duration-300" title="TikTok">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.02 1.59 4.23.99 1.25 2.37 2.16 3.91 2.53v3.96c-1.88-.08-3.7-.75-5.22-1.89-.55-.41-1.04-.9-1.46-1.45v6.52c.08 2.29-1.02 4.54-2.94 5.79-1.92 1.25-4.48 1.48-6.6.61-2.12-.87-3.72-2.87-4.14-5.14-.42-2.27.35-4.66 2-6.19 1.65-1.53 4.02-2.09 6.18-1.46V8.2c-1.63-.38-3.37-.17-4.87.59-1.5 1.05-2.42 2.82-2.43 4.67-.01 1.85.91 3.62 2.41 4.67 1.5.76 3.24.97 4.87.59 1.63-.38 2.91-1.55 3.39-3.15.08-.28.11-.57.11-.86V.02z"/></svg>
+                    </a>
                 </div>
             </div>
 
@@ -234,7 +475,7 @@
 
         <!-- Copyright Bar -->
         <div class="container-custom pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500 font-['Outfit']">
-            <p>&copy; 2026 Festival Budaya Wong Tani 2. Hak cipta dilindungi.</p>
+            <p>&copy; 2026 Festival Budaya Wong Tani #2. Hak cipta dilindungi.</p>
             <div class="flex gap-6">
                 <a href="#" class="hover:text-white transition-colors duration-300">Kebijakan Privasi</a>
                 <a href="#" class="hover:text-white transition-colors duration-300">Syarat & Ketentuan</a>
