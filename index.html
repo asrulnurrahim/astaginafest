@@ -197,31 +197,122 @@
         </div>
     </section>
 
-    <!-- Highlight / Intro Section -->
-    <section class="section-padding bg-astagina-cream">
-        <div class="container-custom">
-            <div class="flex flex-col lg:flex-row items-center gap-12">
-                <div class="w-full lg:w-1/2" data-aos="fade-right">
-                    <h2 class="section-title text-left mb-6">Kembali ke Akar,<br>Merawat Masa Depan</h2>
-                    <p class="text-gray-700 leading-relaxed mb-6">
-                        Astagina Fest adalah ruang perjumpaan antara petani, pengrajin lokal, dan masyarakat luas. Di sini, kita tidak hanya merayakan hasil panen, tetapi juga melestarikan kearifan lokal yang ramah lingkungan.
-                    </p>
-                    <p class="text-gray-700 leading-relaxed mb-8">
-                        Dapatkan inspirasi dari pameran inovasi pertanian, nikmati produk organik langsung dari sumbernya, dan dukung pertumbuhan ekonomi komunitas lokal.
-                    </p>
-                    <a href="tentang.html" class="text-astagina-orange font-semibold flex items-center gap-2 hover:underline">
-                        Lebih Lanjut Tentang Kami <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                    </a>
-                </div>
-                <div class="w-full lg:w-1/2 grid grid-cols-2 gap-4" data-aos="fade-left">
-                    <div class="img-wrapper mt-8">
-                        <img src="assets/img/gallery/1.png" alt="Petani Lokal" class="w-full h-auto object-cover rounded-2xl shadow-lg">
-                    </div>
-                    <div class="img-wrapper">
-                        <img src="assets/img/tenant/2.png" alt="Produk Organik" class="w-full h-auto object-cover rounded-2xl shadow-lg">
-                    </div>
-                </div>
+    <!-- Redesigned About Us (Tentang Kami) Section -->
+    <section class="section-padding bg-[#fcfbf9] relative overflow-hidden">
+        <!-- Background light blur shapes for depth -->
+        <div class="absolute top-1/4 -left-20 w-72 h-72 bg-[#e6ede4]/60 rounded-full blur-3xl -z-10"></div>
+        <div class="absolute bottom-1/4 -right-20 w-80 h-80 bg-amber-100/30 rounded-full blur-3xl -z-10"></div>
+
+        <div class="container-custom" data-aos="fade-up">
+            
+            <!-- Section Header (Centered) -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="inline-block text-xs font-bold uppercase tracking-widest text-[#3a5c31] bg-[#e6ede4] px-4 py-1.5 rounded-full mb-4">
+                    Tentang Festival
+                </span>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[#3a5c31] font-['Playfair_Display'] leading-tight mb-4">
+                    Mengapa Festival Budaya Wong Tani?
+                </h2>
+                <p class="text-gray-600 text-base md:text-lg leading-relaxed font-['Outfit']">
+                    Sebuah perayaan yang memadukan tradisi, inovasi, dan semangat gotong royong untuk memajukan budaya dan ekonomi lokal.
+                </p>
             </div>
+            
+            <!-- Grid Content -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Side: Staggered 2 Images (Preserved) -->
+                <div class="lg:col-span-6 grid grid-cols-2 gap-4 relative md:pr-4" data-aos="fade-right">
+                    <!-- First Image (With Location Badge) -->
+                    <div class="img-wrapper mt-8 relative group overflow-hidden rounded-2xl shadow-md border-4 border-white transition-all duration-300 hover:shadow-xl">
+                        <img src="assets/img/gallery/1.png" alt="Petani Lokal" class="w-full h-full object-cover aspect-[4/5] transition-transform duration-500 group-hover:scale-105">
+                        <!-- Bottom Gold Location Badge -->
+                        <div class="absolute bottom-4 left-4 bg-[#EAB308] text-gray-900 text-[10px] md:text-xs font-extrabold uppercase tracking-wider px-3 py-1.5 rounded-lg shadow-sm border border-amber-400">
+                            Panusupan, Jawa Tengah
+                        </div>
+                    </div>
+                    
+                    <!-- Second Image -->
+                    <div class="img-wrapper relative group overflow-hidden rounded-2xl shadow-md border-4 border-white transition-all duration-300 hover:shadow-xl">
+                        <img src="assets/img/tenant/2.png" alt="Produk Organik" class="w-full h-full object-cover aspect-[4/5] transition-transform duration-500 group-hover:scale-105">
+                    </div>
+                </div>
+                
+                <!-- Right Side: 4 Features list -->
+                <div class="lg:col-span-6 flex flex-col gap-6 md:pl-4" data-aos="fade-left">
+                    
+                    <!-- Feature Item 1 -->
+                    <div class="flex items-start gap-4 p-4 rounded-2xl transition duration-300 hover:bg-[#e6ede4]/20">
+                        <div class="w-12 h-12 rounded-xl bg-[#e6ede4] text-[#3a5c31] flex items-center justify-center flex-shrink-0 transition duration-300 hover:scale-105 shadow-sm">
+                            <i data-lucide="sprout" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-[#3a5c31] font-['Outfit'] text-base md:text-lg mb-1">
+                                Kearifan Lokal Petani
+                            </h4>
+                            <p class="text-sm text-gray-600 leading-relaxed font-['Outfit']">
+                                Rayakan warisan pertanian Nusantara melalui pameran alat tradisional, ritual panen, dan pementasan seni tani.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Feature Item 2 -->
+                    <div class="flex items-start gap-4 p-4 rounded-2xl transition duration-300 hover:bg-[#e6ede4]/20">
+                        <div class="w-12 h-12 rounded-xl bg-[#e6ede4] text-[#3a5c31] flex items-center justify-center flex-shrink-0 transition duration-300 hover:scale-105 shadow-sm">
+                            <i data-lucide="store" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-[#3a5c31] font-['Outfit'] text-base md:text-lg mb-1">
+                                Kuliner & UMKM Lokal
+                            </h4>
+                            <p class="text-sm text-gray-600 leading-relaxed font-['Outfit']">
+                                Nikmati ragam kuliner khas desa dan temukan produk UMKM berkualitas langsung dari tangan pengrajin lokal.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Feature Item 3 -->
+                    <div class="flex items-start gap-4 p-4 rounded-2xl transition duration-300 hover:bg-[#e6ede4]/20">
+                        <div class="w-12 h-12 rounded-xl bg-[#e6ede4] text-[#3a5c31] flex items-center justify-center flex-shrink-0 transition duration-300 hover:scale-105 shadow-sm">
+                            <i data-lucide="music-4" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-[#3a5c31] font-['Outfit'] text-base md:text-lg mb-1">
+                                Hiburan untuk Keluarga
+                            </h4>
+                            <p class="text-sm text-gray-600 leading-relaxed font-['Outfit']">
+                                Lomba, games interaktif, dan penampilan bintang tamu yang menghibur untuk semua usia.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Feature Item 4 -->
+                    <div class="flex items-start gap-4 p-4 rounded-2xl transition duration-300 hover:bg-[#e6ede4]/20">
+                        <div class="w-12 h-12 rounded-xl bg-[#e6ede4] text-[#3a5c31] flex items-center justify-center flex-shrink-0 transition duration-300 hover:scale-105 shadow-sm">
+                            <i data-lucide="sun" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-[#3a5c31] font-['Outfit'] text-base md:text-lg mb-1">
+                                Edukasi Pertanian
+                            </h4>
+                            <p class="text-sm text-gray-600 leading-relaxed font-['Outfit']">
+                                Workshop dan demo pertanian modern yang membuka wawasan generasi muda tentang potensi agribisnis.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Button -->
+                    <div class="mt-4 pl-4">
+                        <a href="tentang.html" class="bg-[#3a5c31] hover:bg-[#2c4725] text-white font-semibold px-8 py-3.5 rounded-xl transition duration-300 shadow hover:shadow-lg inline-flex items-center gap-2 group">
+                            Pelajari Lebih Lanjut
+                            <i data-lucide="arrow-right" class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
         </div>
     </section>
 
