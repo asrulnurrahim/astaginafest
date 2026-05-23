@@ -6,6 +6,11 @@ document.addEventListener('DOMContentLoaded', () => {
             once: true,
             offset: 100,
         });
+
+        // Recalculate animation trigger points once all assets/images are fully loaded
+        window.addEventListener('load', () => {
+            AOS.refresh();
+        });
     }
 
     // Initialize Lucide Icons

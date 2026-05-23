@@ -246,3 +246,17 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 4px !important;
   opacity: 1 !important;
 }
+
+/* Navbar Logo Scroll Toggles */
+#navbar.scrolled .navbar-logo-white {
+  display: none !important;
+}
+#navbar.scrolled .navbar-logo-dark {
+  display: block !important;
+}
+#navbar:not(.scrolled) .navbar-logo-white {
+  display: block !important;
+}
+#navbar:not(.scrolled) .navbar-logo-dark {
+  display: none !important;
+}

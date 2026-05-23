@@ -25,6 +25,9 @@
     
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/logo/logo.png">
 </head>
 <body class="antialiased">
 
@@ -34,9 +37,7 @@
             <!-- Left Logo Block -->
             <div class="flex-1 flex justify-start">
                 <a href="index.html" class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-astagina-green rounded-xl flex items-center justify-center text-white shrink-0 shadow-inner">
-                        <i data-lucide="sprout" class="w-5 h-5 text-yellow-400"></i>
-                    </div>
+                    <img src="assets/img/logo/logo.png" alt="Logo Popdarwis Astagina" class="w-10 h-10 object-contain shrink-0">
                     <div class="flex flex-col text-left">
                         <span class="font-bold logo-title text-astagina-green-dark leading-tight text-sm md:text-base">Popdarwis Astagina</span>
                         <span class="text-[10px] md:text-xs logo-subtitle text-astagina-orange leading-tight font-medium">Festival Budaya Wong Tani</span>
@@ -50,7 +51,7 @@
                 <a href="jadwal.html" class="nav-link !text-gray-800 hover:!text-astagina-orange">Jadwal</a>
                 <a href="index.html#pengisi" class="nav-link !text-gray-800 hover:!text-astagina-orange">Pengisi Acara</a>
                 <a href="stand.html" class="nav-link !text-gray-800 hover:!text-astagina-orange">Stand</a>
-                <a href="index.html#merch" class="nav-link !text-gray-800 hover:!text-astagina-orange">Merchandise</a>
+                <a href="merchandise.html" class="nav-link !text-gray-800 hover:!text-astagina-orange">Merchandise</a>
                 <a href="galeri.html" class="nav-link !text-gray-800 hover:!text-astagina-orange">Galeri</a>
                 <a href="lokasi.html" class="nav-link !text-gray-800 hover:!text-astagina-orange">Lokasi</a>
             </div>
@@ -81,7 +82,7 @@
             <a href="jadwal.html" class="hover:text-astagina-orange">Jadwal</a>
             <a href="index.html#pengisi" class="hover:text-astagina-orange">Pengisi Acara</a>
             <a href="stand.html" class="hover:text-astagina-orange">Stand</a>
-            <a href="index.html#merch" class="hover:text-astagina-orange">Merchandise</a>
+            <a href="merchandise.html" class="hover:text-astagina-orange">Merchandise</a>
             <a href="galeri.html" class="hover:text-astagina-orange">Galeri</a>
             <a href="lokasi.html" class="hover:text-astagina-orange">Lokasi</a>
             <a href="lokasi.html" class="bg-astagina-orange text-white text-center font-bold py-3 rounded-full text-sm mt-4 shadow-sm">Hubungi Kami</a>
@@ -89,107 +90,254 @@
     </div>
 
     <!-- Page Header -->
-    <header class="pt-32 pb-16 bg-astagina-green-dark text-white relative overflow-hidden">
+    <header class="pt-32 pb-16 bg-astagina-green-dark text-white text-center relative overflow-hidden">
+        <!-- Background Pattern -->
         <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 32px 32px;"></div>
-        <div class="container-custom relative z-10 text-center" data-aos="fade-up">
-            <h1 class="font-['Playfair_Display'] text-4xl md:text-5xl font-bold mb-4">Tentang Astagina Fest</h1>
-            <p class="text-astagina-cream text-lg max-w-2xl mx-auto">Merajut kembali hubungan antara alam, budaya, dan manusia melalui perayaan pertanian modern.</p>
+        
+        <div class="container-custom relative z-10" data-aos="fade-up">
+            <h1 class="font-['Playfair_Display'] text-4xl md:text-5xl font-bold mb-4">Tentang Festival Budaya Wong Tani 2</h1>
+            <p class="text-astagina-cream text-lg max-w-2xl mx-auto px-4 font-['Outfit']">Merayakan kekayaan budaya dan memberdayakan UMKM lokal</p>
         </div>
     </header>
 
-    <!-- Content Section -->
-    <section class="section-padding bg-white">
+    <!-- Sejarah Festival Section -->
+    <section class="py-20 bg-white">
         <div class="container-custom">
             <div class="flex flex-col lg:flex-row gap-12 items-center">
+                <!-- Left: Beautiful generated Image -->
                 <div class="w-full lg:w-1/2" data-aos="fade-right">
-                    <img src="assets/img/gallery/1.png" alt="Tentang Astagina" class="w-full rounded-2xl shadow-xl">
+                    <div class="relative rounded-3xl overflow-hidden shadow-xl border-4 border-white transform hover:scale-[1.02] transition duration-300">
+                        <img src="assets/img/gallery/about_festival.png" alt="Festival Budaya Wong Tani 2" class="w-full h-auto object-cover">
+                        <!-- Bottom soft gradient overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                    </div>
                 </div>
+                
+                <!-- Right: Content -->
                 <div class="w-full lg:w-1/2" data-aos="fade-left">
-                    <h2 class="text-3xl font-bold text-astagina-green-dark mb-6 font-['Playfair_Display']">Latar Belakang</h2>
-                    <p class="text-gray-700 leading-relaxed mb-4">
-                        Astagina Fest lahir dari kepedulian terhadap kelestarian alam dan kesejahteraan petani lokal. Kata "Astagina" sendiri berarti sesuatu yang memiliki delapan kegunaan, melambangkan harapan bahwa festival ini membawa banyak manfaat bagi semua pihak.
-                    </p>
-                    <p class="text-gray-700 leading-relaxed mb-6">
-                        Kami mengusung konsep Eco-Tourism dan Community Gathering, di mana masyarakat perkotaan dapat berinteraksi langsung dengan pahlawan pangan kita, belajar tentang pertanian organik, dan mencicipi hasil bumi yang jujur.
-                    </p>
-                    <div class="grid grid-cols-2 gap-6 mt-8 border-t border-gray-100 pt-8">
-                        <div>
-                            <h4 class="text-4xl font-bold text-astagina-orange mb-2">50+</h4>
-                            <p class="text-gray-600 font-medium">Petani Lokal</p>
-                        </div>
-                        <div>
-                            <h4 class="text-4xl font-bold text-astagina-orange mb-2">10K+</h4>
-                            <p class="text-gray-600 font-medium">Pengunjung</p>
-                        </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-astagina-green-dark mb-6 font-['Playfair_Display'] relative inline-block">
+                        Sejarah Festival
+                        <span class="absolute -bottom-2 left-0 w-20 h-1 bg-astagina-orange rounded-full"></span>
+                    </h2>
+                    
+                    <div class="text-gray-600 font-['Outfit'] space-y-5 text-sm md:text-base leading-relaxed">
+                        <p>
+                            Festival Budaya Wong Tani pertama kali diselenggarakan pada tahun 2024 sebagai bentuk apresiasi terhadap kekayaan budaya lokal dan upaya pemberdayaan pelaku UMKM di Panusupan. Kesuksesan festival perdana mendorong kami untuk menghadirkan edisi kedua yang lebih besar dan meriah.
+                        </p>
+                        <p>
+                            Festival Budaya Wong Tani 2 hadir dengan konsep yang lebih matang, menggabungkan pertunjukan seni tradisional, festival kuliner, bazar UMKM, dan berbagai aktivitas interaktif yang melibatkan seluruh lapisan masyarakat.
+                        </p>
+                        <p>
+                            Dengan tema <span class="font-semibold text-astagina-green-dark">"Ragam Rasa, Merajut Nusantara"</span>, kami mengajak seluruh masyarakat untuk merayakan keberagaman budaya Indonesia sambil mendukung pertumbuhan ekonomi lokal.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Visi Misi -->
-    <section class="section-padding bg-astagina-cream">
+    <!-- Visi & Misi Section -->
+    <section class="py-20 bg-astagina-cream">
         <div class="container-custom">
-            <h2 class="section-title mb-12">Nilai-Nilai Kami</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition text-center" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-16 h-16 bg-astagina-cream rounded-full flex items-center justify-center mx-auto mb-6 text-astagina-green">
-                        <i data-lucide="leaf" class="w-8 h-8"></i>
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-astagina-green-dark font-['Playfair_Display'] mb-4">Visi & Misi</h2>
+                <div class="w-24 h-1 bg-astagina-orange mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+                <!-- Visi Card -->
+                <div class="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+                    <div>
+                        <h3 class="text-2xl font-bold text-[#D93F5F] font-['Playfair_Display'] mb-6 flex items-center gap-3">
+                            <span class="w-8 h-8 rounded-full bg-[#FFF0F2] flex items-center justify-center text-xs font-bold text-[#D93F5F]">1</span>
+                            Visi
+                        </h3>
+                        <p class="text-gray-600 font-['Outfit'] leading-relaxed text-sm md:text-base">
+                            Menjadi festival budaya terbesar di Jawa Tengah yang mampu melestarikan warisan budaya Nusantara sambil memberdayakan ekonomi kreatif dan UMKM lokal untuk menciptakan dampak positif berkelanjutan bagi masyarakat.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 text-gray-800 font-['Playfair_Display']">Keberlanjutan</h3>
-                    <p class="text-gray-600">Mendukung praktik pertanian yang selaras dengan alam tanpa merusak ekosistem.</p>
                 </div>
-                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition text-center" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-16 h-16 bg-astagina-cream rounded-full flex items-center justify-center mx-auto mb-6 text-astagina-green">
-                        <i data-lucide="users" class="w-8 h-8"></i>
+                
+                <!-- Misi Card -->
+                <div class="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+                    <div>
+                        <h3 class="text-2xl font-bold text-astagina-green-dark font-['Playfair_Display'] mb-6 flex items-center gap-3">
+                            <span class="w-8 h-8 rounded-full bg-emerald-50 flex items-center justify-center text-xs font-bold text-astagina-green">2</span>
+                            Misi
+                        </h3>
+                        <ul class="text-gray-600 font-['Outfit'] space-y-4 text-sm md:text-base">
+                            <li class="flex items-start gap-3">
+                                <span class="text-[#D93F5F] text-xl leading-none mt-1">&bull;</span>
+                                <span class="leading-relaxed">Menyelenggarakan festival budaya berkualitas tinggi yang menampilkan keberagaman seni dan tradisi Nusantara.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-[#D93F5F] text-xl leading-none mt-1">&bull;</span>
+                                <span class="leading-relaxed">Memberikan platform bagi pelaku UMKM untuk memasarkan produk mereka.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-[#D93F5F] text-xl leading-none mt-1">&bull;</span>
+                                <span class="leading-relaxed">Meningkatkan kesadaran masyarakat akan pentingnya pelestarian budaya lokal.</span>
+                            </li>
+                        </ul>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 text-gray-800 font-['Playfair_Display']">Komunitas</h3>
-                    <p class="text-gray-600">Membangun jembatan antara konsumen dan produsen lokal secara adil dan transparan.</p>
                 </div>
-                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition text-center" data-aos="fade-up" data-aos-delay="300">
-                    <div class="w-16 h-16 bg-astagina-cream rounded-full flex items-center justify-center mx-auto mb-6 text-astagina-green">
-                        <i data-lucide="heart" class="w-8 h-8"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tujuan Festival Section -->
+    <section class="py-20 bg-white">
+        <div class="container-custom">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-astagina-green-dark font-['Playfair_Display'] mb-4">Tujuan Festival</h2>
+                <div class="w-24 h-1 bg-astagina-orange mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1: Melestarikan Budaya -->
+                <div class="bg-white p-6 rounded-3xl border border-gray-100 hover:border-transparent hover:shadow-xl transition-all duration-300 text-center flex flex-col items-center justify-between h-full" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex flex-col items-center">
+                        <div class="w-14 h-14 bg-[#FFF0F2] rounded-2xl flex items-center justify-center text-[#D93F5F] mb-6">
+                            <i data-lucide="heart" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-3 font-['Playfair_Display']">Melestarikan Budaya</h3>
+                        <p class="text-gray-500 font-['Outfit'] text-xs md:text-sm leading-relaxed px-2">
+                            Mempertahankan dan mengembangkan warisan budaya Nusantara untuk generasi mendatang
+                        </p>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 text-gray-800 font-['Playfair_Display']">Budaya</h3>
-                    <p class="text-gray-600">Melestarikan kearifan lokal melalui seni, kuliner, dan tradisi masyarakat agraris.</p>
+                </div>
+                
+                <!-- Card 2: Memberdayakan UMKM -->
+                <div class="bg-white p-6 rounded-3xl border border-gray-100 hover:border-transparent hover:shadow-xl transition-all duration-300 text-center flex flex-col items-center justify-between h-full" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex flex-col items-center">
+                        <div class="w-14 h-14 bg-orange-50 rounded-2xl flex items-center justify-center text-astagina-orange mb-6">
+                            <i data-lucide="trending-up" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-3 font-['Playfair_Display']">Memberdayakan UMKM</h3>
+                        <p class="text-gray-500 font-['Outfit'] text-xs md:text-sm leading-relaxed px-2">
+                            Memberikan platform bagi pelaku UMKM lokal untuk mengembangkan usaha mereka
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Card 3: Mempererat Komunitas -->
+                <div class="bg-white p-6 rounded-3xl border border-gray-100 hover:border-transparent hover:shadow-xl transition-all duration-300 text-center flex flex-col items-center justify-between h-full" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex flex-col items-center">
+                        <div class="w-14 h-14 bg-[#F5F3FF] rounded-2xl flex items-center justify-center text-indigo-500 mb-6">
+                            <i data-lucide="sparkles" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-3 font-['Playfair_Display']">Mempererat Komunitas</h3>
+                        <p class="text-gray-500 font-['Outfit'] text-xs md:text-sm leading-relaxed px-2">
+                            Menciptakan ruang interaksi yang mempererat hubungan antar masyarakat
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Card 4: Meningkatkan Ekonomi -->
+                <div class="bg-white p-6 rounded-3xl border border-gray-100 hover:border-transparent hover:shadow-xl transition-all duration-300 text-center flex flex-col items-center justify-between h-full" data-aos="fade-up" data-aos-delay="400">
+                    <div class="flex flex-col items-center">
+                        <div class="w-14 h-14 bg-emerald-50 rounded-2xl flex items-center justify-center text-astagina-green mb-6">
+                            <i data-lucide="target" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-3 font-['Playfair_Display']">Meningkatkan Ekonomi</h3>
+                        <p class="text-gray-500 font-['Outfit'] text-xs md:text-sm leading-relaxed px-2">
+                            Mendorong pertumbuhan ekonomi lokal melalui pariwisata dan perdagangan
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white pt-16 pb-8 border-t-4 border-astagina-green">
-        <div class="container-custom grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-            <!-- Footer content similar to index.html -->
-            <div class="col-span-1 md:col-span-1">
-                <img src="assets/img/logo/logo.png" alt="Astagina Fest" class="h-12 w-auto rounded-lg bg-white p-1 mb-4">
-                <p class="text-gray-400 text-sm mb-4">Merayakan harmoni antara manusia, alam, dan budaya melalui festival tani modern terbesar di Indonesia.</p>
+    <footer class="bg-[#171717] text-white pt-16 pb-8 border-t-4 border-astagina-green">
+        <div class="container-custom grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            <!-- Column 1: Brand & Socials -->
+            <div class="col-span-1">
+                <div class="flex items-center gap-3 mb-4">
+                    <img src="assets/img/logo/logo.png" alt="Logo Wong Tani" class="w-12 h-12 rounded-xl bg-white p-1 object-contain">
+                    <div class="flex flex-col text-left">
+                        <span class="font-bold text-[#EAB308] leading-tight text-lg font-['Playfair_Display']">Wong Tani 2</span>
+                        <span class="text-xs text-gray-400 font-medium">Festival Budaya</span>
+                    </div>
+                </div>
+                <p class="text-gray-400 text-sm mb-6 leading-relaxed font-['Outfit']">
+                    Merayakan kekayaan budaya Nusantara dan memberdayakan UMKM lokal melalui festival yang meriah dan bermakna.
+                </p>
+                <!-- Social media icons in rounded yellow-orange circles -->
+                <div class="flex flex-wrap gap-2.5">
+                    <a href="#" class="w-8 h-8 rounded-full bg-[#EAB308] text-[#171717] hover:bg-white hover:text-[#EAB308] flex items-center justify-center transition-all duration-300"><i data-lucide="twitter" class="w-4 h-4"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full bg-[#EAB308] text-[#171717] hover:bg-white hover:text-[#EAB308] flex items-center justify-center transition-all duration-300"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full bg-[#EAB308] text-[#171717] hover:bg-white hover:text-[#EAB308] flex items-center justify-center transition-all duration-300"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full bg-[#EAB308] text-[#171717] hover:bg-white hover:text-[#EAB308] flex items-center justify-center transition-all duration-300"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full bg-[#EAB308] text-[#171717] hover:bg-white hover:text-[#EAB308] flex items-center justify-center transition-all duration-300"><i data-lucide="youtube" class="w-4 h-4"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full bg-[#EAB308] text-[#171717] hover:bg-white hover:text-[#EAB308] flex items-center justify-center transition-all duration-300"><i data-lucide="music-4" class="w-4 h-4"></i></a>
+                </div>
             </div>
-            <div>
-                <h4 class="text-lg font-bold mb-4 font-['Playfair_Display'] text-astagina-orange">Menu</h4>
-                <ul class="flex flex-col gap-2 text-gray-400">
-                    <li><a href="index.html" class="hover:text-white transition">Beranda</a></li>
-                    <li><a href="tentang.html" class="hover:text-white transition">Tentang Festival</a></li>
-                    <li><a href="jadwal.html" class="hover:text-white transition">Jadwal Acara</a></li>
+
+            <!-- Column 2: Tautan Cepat -->
+            <div class="col-span-1 lg:pl-8">
+                <h4 class="text-lg font-bold mb-5 font-['Playfair_Display'] text-[#EAB308]">Tautan Cepat</h4>
+                <ul class="flex flex-col gap-2.5 text-gray-400 font-['Outfit'] text-sm">
+                    <li><a href="index.html" class="hover:text-[#EAB308] transition-colors duration-300">Beranda</a></li>
+                    <li><a href="tentang.html" class="hover:text-[#EAB308] transition-colors duration-300">Tentang Festival</a></li>
+                    <li><a href="merchandise.html" class="hover:text-[#EAB308] transition-colors duration-300">Merchandise</a></li>
+                    <li><a href="jadwal.html" class="hover:text-[#EAB308] transition-colors duration-300">Rundown Acara</a></li>
+                    <li><a href="stand.html" class="hover:text-[#EAB308] transition-colors duration-300">Stan Festival</a></li>
+                    <li><a href="galeri.html" class="hover:text-[#EAB308] transition-colors duration-300">Galeri</a></li>
+                    <li><a href="index.html#faq" class="hover:text-[#EAB308] transition-colors duration-300">FAQ</a></li>
                 </ul>
             </div>
-            <div>
-                <h4 class="text-lg font-bold mb-4 font-['Playfair_Display'] text-astagina-orange">Informasi</h4>
-                <ul class="flex flex-col gap-2 text-gray-400">
-                    <li><a href="stand.html" class="hover:text-white transition">Daftar Tenant</a></li>
-                    <li><a href="galeri.html" class="hover:text-white transition">Galeri</a></li>
-                    <li><a href="lokasi.html" class="hover:text-white transition">Panduan Lokasi</a></li>
+
+            <!-- Column 3: Kontak -->
+            <div class="col-span-1">
+                <h4 class="text-lg font-bold mb-5 font-['Playfair_Display'] text-[#EAB308]">Kontak</h4>
+                <ul class="flex flex-col gap-5 text-gray-400 font-['Outfit'] text-sm">
+                    <li class="flex gap-3 items-start">
+                        <div class="w-8 h-8 rounded-full bg-neutral-800 text-[#EAB308] flex items-center justify-center shrink-0 mt-0.5">
+                            <i data-lucide="message-square" class="w-4 h-4"></i>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-xs text-gray-500 uppercase tracking-wider font-semibold">WhatsApp</span>
+                            <a href="https://wa.me/6281217892683" target="_blank" class="text-gray-200 hover:text-[#EAB308] transition-colors duration-300 font-medium mt-0.5">0812-1789-2683</a>
+                        </div>
+                    </li>
+                    <li class="flex gap-3 items-start">
+                        <div class="w-8 h-8 rounded-full bg-neutral-800 text-[#EAB308] flex items-center justify-center shrink-0 mt-0.5">
+                            <i data-lucide="mail" class="w-4 h-4"></i>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-xs text-gray-500 uppercase tracking-wider font-semibold">Email</span>
+                            <a href="mailto:halo@astaginafest.id" class="text-gray-200 hover:text-[#EAB308] transition-colors duration-300 font-medium mt-0.5">halo@astaginafest.id</a>
+                        </div>
+                    </li>
                 </ul>
             </div>
-            <div>
-                <h4 class="text-lg font-bold mb-4 font-['Playfair_Display'] text-astagina-orange">Kontak</h4>
-                <ul class="flex flex-col gap-3 text-gray-400">
-                    <li class="flex items-center gap-2"><i data-lucide="mail" class="w-5 h-5 text-astagina-green-light"></i><span class="text-sm">halo@astaginafest.id</span></li>
-                </ul>
+
+            <!-- Column 4: Lokasi & Tanggal Card -->
+            <div class="col-span-1">
+                <h4 class="text-lg font-bold mb-5 font-['Playfair_Display'] text-[#EAB308]">Lokasi</h4>
+                <div class="text-gray-400 font-['Outfit'] text-sm mb-5 leading-relaxed">
+                    <p class="font-semibold text-gray-200">Lapangan Panusupan</p>
+                    <p>Kecamatan Rembang, Purbalingga</p>
+                    <p>Jawa Tengah, Indonesia</p>
+                </div>
+                <!-- Dark Brown Card -->
+                <div class="bg-[#2D1B0F] border border-[#6B3B18]/30 rounded-2xl p-4 shadow-inner flex flex-col gap-1.5">
+                    <span class="text-[10px] text-amber-500/80 uppercase tracking-widest font-semibold font-['Outfit']">TANGGAL FESTIVAL</span>
+                    <span class="text-lg font-bold text-[#EAB308] leading-tight font-['Playfair_Display']">22 – 24 Agustus 2026</span>
+                    <span class="text-xs text-gray-400 font-['Outfit']">Pukul 08.00 – 22.00 WIB</span>
+                </div>
             </div>
         </div>
-        <div class="container-custom pt-8 border-t border-gray-800 text-center text-sm text-gray-500">
-            <p>&copy; 2026 Astagina Fest. All rights reserved.</p>
+
+        <!-- Copyright Bar -->
+        <div class="container-custom pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500 font-['Outfit']">
+            <p>&copy; 2026 Festival Budaya Wong Tani 2. Hak cipta dilindungi.</p>
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-white transition-colors duration-300">Kebijakan Privasi</a>
+                <a href="#" class="hover:text-white transition-colors duration-300">Syarat & Ketentuan</a>
+            </div>
         </div>
     </footer>
 
