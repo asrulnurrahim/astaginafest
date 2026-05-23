@@ -193,42 +193,4 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-
-    // === PREMIUM AUTOMATIC COUNTDOWN TIMER ===
-    const countdownTargetDate = new Date('August 22, 2026 08:00:00').getTime();
-    
-    function updateCountdown() {
-        const now = new Date().getTime();
-        const difference = countdownTargetDate - now;
-        
-        const daysElement = document.getElementById('countdown-days');
-        const hoursElement = document.getElementById('countdown-hours');
-        const minutesElement = document.getElementById('countdown-minutes');
-        const secondsElement = document.getElementById('countdown-seconds');
-        
-        if (!daysElement) return; // Exit if timer is not on this page
-        
-        if (difference < 0) {
-            daysElement.innerText = "00";
-            hoursElement.innerText = "00";
-            minutesElement.innerText = "00";
-            secondsElement.innerText = "00";
-            return;
-        }
-        
-        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-        
-        daysElement.innerText = days < 10 ? '0' + days : days;
-        hoursElement.innerText = hours < 10 ? '0' + hours : hours;
-        minutesElement.innerText = minutes < 10 ? '0' + minutes : minutes;
-        secondsElement.innerText = seconds < 10 ? '0' + seconds : seconds;
-    }
-    
-    if (document.getElementById('countdown-days')) {
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
-    }
 });

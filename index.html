@@ -106,7 +106,7 @@
     </div>
 
     <!-- Hero Section -->
-    <header class="relative h-screen min-h-[600px] flex items-center justify-center">
+    <header class="relative h-screen flex items-center justify-center overflow-hidden">
         <!-- Background Image -->
         <div class="absolute inset-0 w-full h-full">
             <img src="assets/img/hero/hero.png" alt="Festival Tani Astagina" class="w-full h-full object-cover">
@@ -115,7 +115,7 @@
         </div>
         
         <!-- Hero Content -->
-        <div class="relative z-10 text-center container-custom px-4 mt-20" data-aos="fade-up">
+        <div class="relative z-10 text-center container-custom px-4 pt-8 md:pt-10" data-aos="fade-up">
 
             <!-- Badge POPDARWIS -->
             <div class="inline-flex items-center gap-2 bg-astagina-green-dark/40 border border-astagina-green/60 px-5 py-2 rounded-full text-xs md:text-sm font-semibold text-white tracking-widest mb-3 uppercase">
@@ -125,7 +125,7 @@
 
             <!-- Festival Logo -->
             <div class="flex justify-center mb-3">
-                <img src="assets/img/logo/logo-festival-outline.png" alt="Logo Festival Wong Tani" class="h-48 md:h-64 lg:h-72 w-auto object-contain drop-shadow-[0_8px_24px_rgba(0,0,0,0.5)] animate-pulse-slow">
+                <img src="assets/img/logo/logo-festival-outline.png" alt="Logo Festival Wong Tani" class="h-36 md:h-48 lg:h-56 w-auto object-contain drop-shadow-[0_8px_24px_rgba(0,0,0,0.5)] animate-pulse-slow">
             </div>
 
             <!-- Title -->
@@ -139,43 +139,19 @@
             </p>
 
             <!-- Date and Location -->
-            <div class="flex items-center justify-center gap-2 text-white/90 text-sm md:text-lg font-medium mb-10">
+            <div class="flex items-center justify-center gap-2 text-white/90 text-sm md:text-lg font-medium mb-6">
                 <i data-lucide="map-pin" class="w-4 h-4 text-yellow-400"></i>
                 <span>29 Juni – 04 Juli 2026 | Panusupan</span>
-            </div>
-
-            <!-- Countdown Timer -->
-            <div class="flex items-center justify-center gap-3 md:gap-4 mb-10 max-w-lg mx-auto" id="countdown-timer">
-                <!-- Days Card -->
-                <div class="w-16 h-20 md:w-20 md:h-24 bg-black/60 backdrop-blur-sm rounded-2xl flex flex-col items-center justify-center border border-white/10 shadow-lg transition hover:scale-105 duration-300">
-                    <span class="text-2xl md:text-3xl font-extrabold text-[#EAB308] tracking-tight font-['Outfit']" id="countdown-days">00</span>
-                    <span class="text-[9px] md:text-[11px] text-gray-300 font-bold uppercase tracking-wider mt-1">Hari</span>
-                </div>
-                <!-- Hours Card -->
-                <div class="w-16 h-20 md:w-20 md:h-24 bg-black/60 backdrop-blur-sm rounded-2xl flex flex-col items-center justify-center border border-white/10 shadow-lg transition hover:scale-105 duration-300">
-                    <span class="text-2xl md:text-3xl font-extrabold text-[#EAB308] tracking-tight font-['Outfit']" id="countdown-hours">00</span>
-                    <span class="text-[9px] md:text-[11px] text-gray-300 font-bold uppercase tracking-wider mt-1">Jam</span>
-                </div>
-                <!-- Minutes Card -->
-                <div class="w-16 h-20 md:w-20 md:h-24 bg-black/60 backdrop-blur-sm rounded-2xl flex flex-col items-center justify-center border border-white/10 shadow-lg transition hover:scale-105 duration-300">
-                    <span class="text-2xl md:text-3xl font-extrabold text-[#EAB308] tracking-tight font-['Outfit']" id="countdown-minutes">00</span>
-                    <span class="text-[9px] md:text-[11px] text-gray-300 font-bold uppercase tracking-wider mt-1">Menit</span>
-                </div>
-                <!-- Seconds Card -->
-                <div class="w-16 h-20 md:w-20 md:h-24 bg-black/60 backdrop-blur-sm rounded-2xl flex flex-col items-center justify-center border border-white/10 shadow-lg transition hover:scale-105 duration-300">
-                    <span class="text-2xl md:text-3xl font-extrabold text-[#EAB308] tracking-tight font-['Outfit']" id="countdown-seconds">00</span>
-                    <span class="text-[9px] md:text-[11px] text-gray-300 font-bold uppercase tracking-wider mt-1">Detik</span>
-                </div>
             </div>
 
             <!-- CTA Buttons (3 custom buttons as requested) -->
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <!-- Daftar Stand -->
-                <a href="stand.html" class="w-48 sm:w-auto text-center px-8 py-3.5 bg-[#f59e0b] hover:bg-[#d97706] text-white font-bold text-base rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform -translate-y-0.5 hover:-translate-y-1">
+                <a href="stand.html" class="w-48 sm:w-auto text-center px-8 py-3.5 bg-[#f59e0b] hover:bg-[#d97706] text-neutral-900 font-bold text-base rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform -translate-y-0.5 hover:-translate-y-1">
                     Daftar Stand
                 </a>
                 <!-- Merchandise -->
-                <a href="merchandise.html" class="w-48 sm:w-auto text-center px-8 py-3.5 bg-neutral-900/40 backdrop-blur-sm border border-neutral-700/50 hover:bg-neutral-800/80 text-white font-bold text-base rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform -translate-y-0.5 hover:-translate-y-1">
+                <a href="merchandise.html" class="w-48 sm:w-auto text-center px-8 py-3.5 bg-[#f59e0b] hover:bg-[#d97706] text-neutral-900 font-bold text-base rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform -translate-y-0.5 hover:-translate-y-1">
                     Merchandise
                 </a>
                 <!-- Hubungi Panitia -->
@@ -203,7 +179,7 @@
                     <div class="w-14 h-14 bg-[#e6ede4] text-[#3a5c31] rounded-2xl flex items-center justify-center mb-4 transition duration-300 hover:scale-105">
                         <i data-lucide="users" class="w-6 h-6"></i>
                     </div>
-                    <span class="text-3xl md:text-4xl font-bold text-gray-800 tracking-tight font-['Playfair_Display']">15.000+</span>
+                    <span class="text-3xl md:text-4xl font-bold text-gray-800 tracking-tight font-['Playfair_Display']">50.000+</span>
                     <span class="text-xs md:text-sm text-gray-500 font-medium mt-2">Target Pengunjung</span>
                 </div>
 
