@@ -353,3 +353,47 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* Optimize navbar layout spacing and breathing room on larger screens */
+@media (min-width: 1024px) {
+  .navbar .container-custom {
+    max-width: 1280px !important; /* Elegant boundary: holds links together beautifully without hugging screen edges */
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .navbar .hidden.lg\:flex {
+    gap: 1.25rem !important; /* Perfect distance: elements feel unified and spacious */
+  }
+  .nav-link {
+    font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .navbar .container-custom {
+    max-width: 1360px !important; /* Keeps navbar items centered and integrated on wide displays */
+  }
+  .navbar .hidden.lg\:flex {
+    gap: 1.5rem !important; /* Balanced widescreen gaps */
+  }
+  .nav-link {
+    font-size: 1rem;
+  }
+}
+
+/* Optimize footer layout bounds to align perfectly with the navbar on larger screens */
+@media (min-width: 1024px) {
+  footer .container-custom {
+    max-width: 1280px !important;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  footer .container-custom {
+    max-width: 1360px !important;
+  }
+}
+
+
+
