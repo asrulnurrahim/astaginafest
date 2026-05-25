@@ -164,12 +164,22 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.875rem;
   white-space: nowrap;
 }
-.nav-link:hover {
-  color: var(--color-orange);
+.nav-link:hover,
+.nav-link.hover\:\!text-astagina-orange:hover {
+  color: #eab308 !important;
 }
-.nav-link.active {
-  color: var(--color-orange);
+.nav-link.active,
+.nav-link.\!text-astagina-orange {
+  color: #eab308 !important;
   font-weight: 600;
+}
+
+/* Mobile Menu Active & Hover Overrides to Yellow */
+#mobile-menu a.text-astagina-orange {
+  color: #eab308 !important;
+}
+#mobile-menu a.hover\:text-astagina-orange:hover {
+  color: #eab308 !important;
 }
 
 /* Cards */
