@@ -42,7 +42,7 @@
 
     <!-- Navbar -->
     <nav id="navbar" class="navbar">
-        <div class="container-custom flex justify-between items-center w-full">
+        <div class="container-custom flex justify-between items-center w-full relative">
             <!-- Left Logo Block -->
             <div class="flex-1 flex justify-start">
                 <a href="index.html" class="flex items-center gap-3">
@@ -50,15 +50,16 @@
                     <img src="assets/img/logo/logo.png" alt="Logo Astagina" class="w-10 h-10 object-contain shrink-0 navbar-logo-dark">
                     <div class="flex flex-col text-left">
                         <span class="font-bold text-white logo-title leading-tight text-sm md:text-base uppercase tracking-wider">ASTAGINA</span>
-                        <span class="text-[10px] md:text-xs text-yellow-400 logo-subtitle leading-tight font-medium">Popdarwis Desa Panusupan</span>
+                        <span class="text-[10px] md:text-xs text-yellow-400 logo-subtitle leading-tight font-medium">Pokdarwis Desa Panusupan</span>
                     </div>
                 </a>
             </div>
             
             <!-- Center Menu (Desktop) -->
-            <div class="hidden lg:flex justify-center items-center gap-6">
+            <div class="hidden lg:flex lg:absolute lg:left-1/2 lg:-translate-x-1/2 justify-center items-center gap-6">
+                <a href="index.html" class="nav-link !text-astagina-orange font-semibold">Beranda</a>
                 <a href="tentang.html" class="nav-link">Tentang</a>
-                <a href="jadwal.html" class="nav-link">Jadwal</a>
+                <a href="kegiatan.html" class="nav-link">Kegiatan</a>
                 <a href="#pengisi" class="nav-link">Pengisi Acara</a>
                 <a href="stand.html" class="nav-link">Stand</a>
                 <a href="merchandise.html" class="nav-link">Merchandise</a>
@@ -93,7 +94,7 @@
         <div class="flex flex-col gap-5 text-lg font-medium text-gray-800">
             <a href="index.html" class="text-astagina-orange font-semibold">Beranda</a>
             <a href="tentang.html" class="hover:text-astagina-orange">Tentang</a>
-            <a href="jadwal.html" class="hover:text-astagina-orange">Jadwal</a>
+            <a href="kegiatan.html" class="hover:text-astagina-orange">Kegiatan</a>
             <a href="#pengisi" class="hover:text-astagina-orange">Pengisi Acara</a>
             <a href="stand.html" class="hover:text-astagina-orange">Stand</a>
             <a href="merchandise.html" class="hover:text-astagina-orange">Merchandise</a>
@@ -119,10 +120,10 @@
         <!-- Hero Content -->
         <div class="relative z-10 text-center container-custom px-4 pt-8 md:pt-10" data-aos="fade-up">
 
-            <!-- Badge POPDARWIS -->
+            <!-- Badge POKDARWIS -->
             <div class="inline-flex items-center gap-2 bg-astagina-green-dark/40 border border-astagina-green/60 px-5 py-2 rounded-full text-xs md:text-sm font-semibold text-white tracking-widest mb-3 uppercase">
                 <i data-lucide="wheat" class="w-4 h-4 text-yellow-400"></i>
-                <span>Popdarwis Desa Panusupan Presents</span>
+                <span>POKDARWIS ASTAGINA PRESENT</span>
             </div>
 
             <!-- Festival Logo -->
@@ -346,14 +347,14 @@
                 <div class="event-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="h-48 overflow-hidden relative">
                         <img src="assets/img/gallery/1.png" alt="Pasar Tani" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
-                        <div class="absolute top-4 right-4 bg-white text-astagina-green-dark px-3 py-1 rounded-full text-sm font-bold shadow">
-                            08:00 - 18:00
+                        <div class="absolute top-4 right-4 bg-white text-astagina-green-dark px-3 py-1 rounded-full text-xs font-bold shadow">
+                            29 Juni - 04 Juli 2026
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2 font-['Playfair_Display']">Pasar Tani Organik</h3>
-                        <p class="text-gray-600 mb-4">Dapatkan sayur, buah, dan hasil panen segar berkualitas tinggi langsung dari tangan para petani lokal kami.</p>
-                        <a href="stand.html" class="text-astagina-green-dark font-medium hover:text-astagina-orange transition-colors">Lihat Tenant &rarr;</a>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2 font-['Playfair_Display']">Festival Budaya Wong Tani 2</h3>
+                        <p class="text-gray-600 mb-4">Dapatkan sayur, buah, and hasil panen segar berkualitas tinggi langsung dari tangan para petani lokal kami.</p>
+                        <a href="kegiatan.html" class="text-astagina-green-dark font-medium hover:text-astagina-orange transition-colors">Lihat Kegiatan &rarr;</a>
                     </div>
                 </div>
 
@@ -361,14 +362,14 @@
                 <div class="event-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="h-48 overflow-hidden relative">
                         <img src="assets/img/gallery/2.png" alt="Panggung Budaya" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
-                        <div class="absolute top-4 right-4 bg-white text-astagina-green-dark px-3 py-1 rounded-full text-sm font-bold shadow">
-                            19:00 - 22:00
+                        <div class="absolute top-4 right-4 bg-white text-astagina-green-dark px-3 py-1 rounded-full text-xs font-bold shadow">
+                            30 Juni 2026
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2 font-['Playfair_Display']">Panggung Budaya</h3>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2 font-['Playfair_Display']">Pembuatan Blangkon</h3>
                         <p class="text-gray-600 mb-4">Pertunjukan musik tradisional, tari daerah, dan teater rakyat yang dikemas secara modern di bawah bintang-bintang.</p>
-                        <a href="jadwal.html" class="text-astagina-green-dark font-medium hover:text-astagina-orange transition-colors">Lihat Jadwal &rarr;</a>
+                        <a href="kegiatan.html" class="text-astagina-green-dark font-medium hover:text-astagina-orange transition-colors">Lihat Kegiatan &rarr;</a>
                     </div>
                 </div>
 
@@ -376,14 +377,14 @@
                 <div class="event-card" data-aos="fade-up" data-aos-delay="400">
                     <div class="h-48 overflow-hidden relative">
                         <img src="assets/img/tenant/1.png" alt="Bazar Kuliner" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
-                        <div class="absolute top-4 right-4 bg-white text-astagina-green-dark px-3 py-1 rounded-full text-sm font-bold shadow">
-                            Sepanjang Hari
+                        <div class="absolute top-4 right-4 bg-white text-astagina-green-dark px-3 py-1 rounded-full text-xs font-bold shadow">
+                            29 Juni - 04 Juli 2026
                         </div>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-800 mb-2 font-['Playfair_Display']">Bazar Kuliner Nusantara</h3>
                         <p class="text-gray-600 mb-4">Manjakan lidah Anda dengan beragam kuliner tradisional yang dimasak dengan bahan-bahan lokal pilihan.</p>
-                        <a href="stand.html" class="text-astagina-green-dark font-medium hover:text-astagina-orange transition-colors">Cari Makanan &rarr;</a>
+                        <a href="kegiatan.html" class="text-astagina-green-dark font-medium hover:text-astagina-orange transition-colors">Lihat Kegiatan &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -576,48 +577,79 @@
                 <p class="text-gray-600 max-w-2xl mx-auto mt-3">Keseruan dan dokumentasi momen indah perayaan festival budaya Wong Tani sebelumnya.</p>
             </div>
 
-            <!-- Swiper Slider Container -->
-            <div class="swiper gallery-swiper pb-12" data-aos="fade-up" data-aos-delay="100">
-                <div class="swiper-wrapper">
-                    <!-- Slide 1 -->
-                    <div class="swiper-slide rounded-2xl overflow-hidden shadow-sm border border-gray-100 group relative aspect-[4/3] bg-gray-100">
-                        <img src="assets/img/gallery/tari.png" alt="Kemeriahan Tari" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                            <p class="text-white font-bold text-lg font-['Playfair_Display']">Kemeriahan Pentas Seni Budaya</p>
+            <!-- Swiper Slider Outer Wrapper with Navigation Buttons -->
+            <div class="relative px-0 md:px-14" data-aos="fade-up" data-aos-delay="100">
+                <div class="swiper gallery-swiper pb-12">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide rounded-2xl overflow-hidden shadow-sm border border-gray-100 group relative aspect-[4/3] bg-gray-100">
+                            <img src="assets/img/gallery/tari.png" alt="Kemeriahan Tari" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                                <p class="text-white font-bold text-lg font-['Playfair_Display']">Kemeriahan Pentas Seni Budaya</p>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide rounded-2xl overflow-hidden shadow-sm border border-gray-100 group relative aspect-[4/3] bg-gray-100">
+                            <img src="assets/img/gallery/gamelan.png" alt="Alunan Musik Gamelan" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                                <p class="text-white font-bold text-lg font-['Playfair_Display']">Kehangatan Alunan Gamelan Pusaka</p>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide rounded-2xl overflow-hidden shadow-sm border border-gray-100 group relative aspect-[4/3] bg-gray-100">
+                            <img src="assets/img/gallery/teater.png" alt="Pentas Teater Rakyat" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                                <p class="text-white font-bold text-lg font-['Playfair_Display']">Kisah Sejarah Teater Rakyat</p>
+                            </div>
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="swiper-slide rounded-2xl overflow-hidden shadow-sm border border-gray-100 group relative aspect-[4/3] bg-gray-100">
+                            <img src="assets/img/gallery/musik_etnik.png" alt="Senja Etnik Astagina" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                                <p class="text-white font-bold text-lg font-['Playfair_Display']">Gema Musik Etnik Nusantara</p>
+                            </div>
+                        </div>
+                        <!-- Slide 5 -->
+                        <div class="swiper-slide rounded-2xl overflow-hidden shadow-sm border border-gray-100 group relative aspect-[4/3] bg-gray-100">
+                            <img src="assets/img/gallery/reog.png" alt="Atraksi Reog" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                                <p class="text-white font-bold text-lg font-['Playfair_Display']">Kemegahan Reog Ponorogo</p>
+                            </div>
+                        </div>
+                        <!-- Slide 6 -->
+                        <div class="swiper-slide rounded-2xl overflow-hidden shadow-sm border border-gray-100 group relative aspect-[4/3] bg-gray-100">
+                            <img src="assets/img/gallery/penari_topeng.png" alt="Penari Topeng Cirebon" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                                <p class="text-white font-bold text-lg font-['Playfair_Display']">Keanggunan Tari Topeng Tradisional</p>
+                            </div>
+                        </div>
+                        <!-- Slide 7 -->
+                        <div class="swiper-slide rounded-2xl overflow-hidden shadow-sm border border-gray-100 group relative aspect-[4/3] bg-gray-100">
+                            <img src="assets/img/gallery/wayang.png" alt="Wayang Kulit" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                                <p class="text-white font-bold text-lg font-['Playfair_Display']">Magis Kisah Wayang Kulit Nusantara</p>
+                            </div>
+                        </div>
+                        <!-- Slide 8 -->
+                        <div class="swiper-slide rounded-2xl overflow-hidden shadow-sm border border-gray-100 group relative aspect-[4/3] bg-gray-100">
+                            <img src="assets/img/gallery/angklung.png" alt="Angklung" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                                <p class="text-white font-bold text-lg font-['Playfair_Display']">Harmoni Alunan Musik Angklung</p>
+                            </div>
                         </div>
                     </div>
-                    <!-- Slide 2 -->
-                    <div class="swiper-slide rounded-2xl overflow-hidden shadow-sm border border-gray-100 group relative aspect-[4/3] bg-gray-100">
-                        <img src="assets/img/gallery/gamelan.png" alt="Alunan Musik Gamelan" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                            <p class="text-white font-bold text-lg font-['Playfair_Display']">Kehangatan Alunan Gamelan Pusaka</p>
-                        </div>
-                    </div>
-                    <!-- Slide 3 -->
-                    <div class="swiper-slide rounded-2xl overflow-hidden shadow-sm border border-gray-100 group relative aspect-[4/3] bg-gray-100">
-                        <img src="assets/img/gallery/teater.png" alt="Pentas Teater Rakyat" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                            <p class="text-white font-bold text-lg font-['Playfair_Display']">Kisah Sejarah Teater Rakyat</p>
-                        </div>
-                    </div>
-                    <!-- Slide 4 -->
-                    <div class="swiper-slide rounded-2xl overflow-hidden shadow-sm border border-gray-100 group relative aspect-[4/3] bg-gray-100">
-                        <img src="assets/img/gallery/musik_etnik.png" alt="Senja Etnik Astagina" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                            <p class="text-white font-bold text-lg font-['Playfair_Display']">Gema Musik Etnik Nusantara</p>
-                        </div>
-                    </div>
-                    <!-- Slide 5 -->
-                    <div class="swiper-slide rounded-2xl overflow-hidden shadow-sm border border-gray-100 group relative aspect-[4/3] bg-gray-100">
-                        <img src="assets/img/gallery/reog.png" alt="Atraksi Reog" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                            <p class="text-white font-bold text-lg font-['Playfair_Display']">Kemegahan Reog Ponorogo</p>
-                        </div>
-                    </div>
+                    
+                    <!-- Swiper Pagination -->
+                    <div class="swiper-pagination !bottom-0"></div>
                 </div>
-                
-                <!-- Swiper Pagination -->
-                <div class="swiper-pagination !bottom-0"></div>
+
+                <!-- Swiper Navigation Buttons -->
+                <div class="swiper-button-prev !w-8 !h-8 md:!w-10 md:!h-10 bg-transparent border border-astagina-green/30 hover:border-astagina-green rounded-full flex items-center justify-center transition-all duration-300 absolute !top-[calc(50%-24px)] !mt-0 -translate-y-1/2 !left-2 md:!left-0 z-20 after:hidden !text-astagina-green opacity-50 hover:opacity-100 shadow-none">
+                    <i data-lucide="arrow-left" class="w-4 h-4 md:w-5 h-5"></i>
+                </div>
+                <div class="swiper-button-next !w-8 !h-8 md:!w-10 md:!h-10 bg-transparent border border-astagina-green/30 hover:border-astagina-green rounded-full flex items-center justify-center transition-all duration-300 absolute !top-[calc(50%-24px)] !mt-0 -translate-y-1/2 !right-2 md:!right-0 z-20 after:hidden !text-astagina-green opacity-50 hover:opacity-100 shadow-none">
+                    <i data-lucide="arrow-right" class="w-4 h-4 md:w-5 h-5"></i>
+                </div>
             </div>
 
             <!-- Link Button to Full Gallery -->
@@ -983,33 +1015,6 @@
         </div>
     </section>
 
-    <!-- Quick Info Banner -->
-    <section class="py-16 bg-astagina-green-dark text-white relative overflow-hidden">
-        <!-- Background Pattern (Subtle) -->
-        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 32px 32px;"></div>
-        
-        <div class="container-custom relative z-10 flex flex-col md:flex-row justify-between items-center gap-8">
-            <div class="text-center md:text-left">
-                <h3 class="text-3xl font-bold font-['Playfair_Display'] mb-2">Siap untuk Bergabung?</h3>
-                <p class="text-astagina-cream text-lg">Catat tanggalnya dan amankan tiketmu sekarang.</p>
-            </div>
-            
-            <div class="flex flex-col sm:flex-row gap-6 items-center bg-white/10 p-6 rounded-2xl backdrop-blur-sm border border-white/20">
-                <div class="text-center px-4">
-                    <i data-lucide="calendar" class="w-8 h-8 mx-auto mb-2 text-astagina-orange"></i>
-                    <p class="font-bold text-xl">29 Juni - 04 Juli</p>
-                    <p class="text-sm text-gray-300">2026</p>
-                </div>
-                <div class="hidden sm:block w-px h-16 bg-white/20"></div>
-                <div class="text-center px-4">
-                    <i data-lucide="map-pin" class="w-8 h-8 mx-auto mb-2 text-astagina-orange"></i>
-                    <p class="font-bold text-xl">Desa Wisata</p>
-                    <p class="text-sm text-gray-300">Panusupan, Banyumas</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer class="bg-[#171717] text-white pt-16 pb-8 border-t-4 border-astagina-green">
         <div class="container-custom grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
@@ -1019,7 +1024,7 @@
                     <img src="assets/img/logo/logo.png" alt="Logo Wong Tani" class="w-12 h-12 rounded-xl bg-white p-1 object-contain">
                     <div class="flex flex-col text-left">
                         <span class="font-bold text-[#EAB308] leading-tight text-lg font-['Playfair_Display'] uppercase tracking-wider">ASTAGINA</span>
-                        <span class="text-xs text-gray-400 font-medium">Popdarwis Desa Panusupan</span>
+                        <span class="text-xs text-gray-400 font-medium">Pokdarwis Desa Panusupan</span>
                     </div>
                 </div>
                 <p class="text-gray-400 text-sm mb-6 leading-relaxed font-['Outfit']">
@@ -1054,7 +1059,7 @@
                 <ul class="grid grid-cols-2 gap-x-4 gap-y-2.5 text-gray-400 font-['Outfit'] text-sm">
                     <li><a href="index.html" class="hover:text-[#EAB308] transition-colors duration-300">Beranda</a></li>
                     <li><a href="tentang.html" class="hover:text-[#EAB308] transition-colors duration-300">Tentang</a></li>
-                    <li><a href="jadwal.html" class="hover:text-[#EAB308] transition-colors duration-300">Jadwal</a></li>
+                    <li><a href="kegiatan.html" class="hover:text-[#EAB308] transition-colors duration-300">Kegiatan</a></li>
                     <li><a href="index.html#pengisi" class="hover:text-[#EAB308] transition-colors duration-300">Pengisi Acara</a></li>
                     <li><a href="stand.html" class="hover:text-[#EAB308] transition-colors duration-300">Stand</a></li>
                     <li><a href="merchandise.html" class="hover:text-[#EAB308] transition-colors duration-300">Merchandise</a></li>

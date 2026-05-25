@@ -161,7 +161,8 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
   font-weight: 500;
   transition: color 0.3s ease;
-  font-size: 1rem;
+  font-size: 0.875rem;
+  white-space: nowrap;
 }
 .nav-link:hover {
   color: var(--color-orange);
@@ -364,7 +365,7 @@ h1, h2, h3, h4, h5, h6 {
     gap: 1.25rem !important; /* Perfect distance: elements feel unified and spacious */
   }
   .nav-link {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
   }
 }
 
@@ -376,7 +377,7 @@ h1, h2, h3, h4, h5, h6 {
     gap: 1.5rem !important; /* Balanced widescreen gaps */
   }
   .nav-link {
-    font-size: 1rem;
+    font-size: 0.925rem;
   }
 }
 

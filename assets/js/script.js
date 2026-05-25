@@ -78,6 +78,8 @@ document.addEventListener('DOMContentLoaded', () => {
             slidesPerView: 1,
             spaceBetween: 20,
             loop: true,
+            loopedSlides: 4,
+            watchSlidesProgress: true,
             autoplay: {
                 delay: 3000,
                 disableOnInteraction: false,

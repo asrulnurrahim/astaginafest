@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jadwal Acara - Astagina Fest</title>
+    <title>Kegiatan Festival - Astagina Fest</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -32,22 +32,23 @@
 
     <!-- Navbar -->
     <nav id="navbar" class="navbar scrolled !bg-astagina-cream !shadow-sm !py-3">
-        <div class="container-custom flex justify-between items-center w-full">
+        <div class="container-custom flex justify-between items-center w-full relative">
             <!-- Left Logo Block -->
             <div class="flex-1 flex justify-start">
                 <a href="index.html" class="flex items-center gap-3">
                     <img src="assets/img/logo/logo.png" alt="Logo Astagina" class="w-10 h-10 object-contain shrink-0">
                     <div class="flex flex-col text-left">
                         <span class="font-bold logo-title text-astagina-green-dark leading-tight text-sm md:text-base uppercase tracking-wider">ASTAGINA</span>
-                        <span class="text-[10px] md:text-xs logo-subtitle text-astagina-orange leading-tight font-medium">Popdarwis Desa Panusupan</span>
+                        <span class="text-[10px] md:text-xs logo-subtitle text-astagina-orange leading-tight font-medium">Pokdarwis Desa Panusupan</span>
                     </div>
                 </a>
             </div>
             
             <!-- Center Menu (Desktop) -->
-            <div class="hidden lg:flex justify-center items-center gap-6">
+            <div class="hidden lg:flex lg:absolute lg:left-1/2 lg:-translate-x-1/2 justify-center items-center gap-6">
+                <a href="index.html" class="nav-link !text-gray-800 hover:!text-astagina-orange">Beranda</a>
                 <a href="tentang.html" class="nav-link !text-gray-800 hover:!text-astagina-orange">Tentang</a>
-                <a href="jadwal.html" class="nav-link !text-astagina-orange font-semibold">Jadwal</a>
+                <a href="kegiatan.html" class="nav-link !text-astagina-orange font-semibold">Kegiatan</a>
                 <a href="index.html#pengisi" class="nav-link !text-gray-800 hover:!text-astagina-orange">Pengisi Acara</a>
                 <a href="stand.html" class="nav-link !text-gray-800 hover:!text-astagina-orange">Stand</a>
                 <a href="merchandise.html" class="nav-link !text-gray-800 hover:!text-astagina-orange">Merchandise</a>
@@ -82,7 +83,7 @@
         <div class="flex flex-col gap-5 text-lg font-medium text-gray-800">
             <a href="index.html" class="hover:text-astagina-orange">Beranda</a>
             <a href="tentang.html" class="hover:text-astagina-orange">Tentang</a>
-            <a href="jadwal.html" class="text-astagina-orange font-semibold">Jadwal</a>
+            <a href="kegiatan.html" class="text-astagina-orange font-semibold">Kegiatan</a>
             <a href="index.html#pengisi" class="hover:text-astagina-orange">Pengisi Acara</a>
             <a href="stand.html" class="hover:text-astagina-orange">Stand</a>
             <a href="merchandise.html" class="hover:text-astagina-orange">Merchandise</a>
@@ -99,7 +100,7 @@
     <!-- Page Header -->
     <header class="pt-32 pb-12 bg-astagina-green-dark text-white text-center">
         <div class="container-custom" data-aos="fade-up">
-            <h1 class="font-['Playfair_Display'] text-4xl md:text-5xl font-bold mb-4">Jadwal Acara</h1>
+            <h1 class="font-['Playfair_Display'] text-4xl md:text-5xl font-bold mb-4">Kegiatan Festival</h1>
             <p class="text-astagina-cream text-lg">Catat waktunya dan jangan lewatkan momen berharga ini.</p>
         </div>
     </header>
@@ -119,27 +120,21 @@
                         <div class="flex flex-col md:flex-row gap-4 md:gap-8 items-start border-b border-gray-100 pb-6 last:border-0 last:pb-0">
                             <div class="text-astagina-green-dark font-bold text-xl shrink-0 w-32">08:00 - 10:00</div>
                             <div>
-                                <h4 class="text-xl font-bold text-gray-800 mb-2">Parade Gunungan Tani & Pembukaan Agung</h4>
-                                <p class="text-gray-600">Parade budaya pembuka menampilkan iring-iringan gunungan hasil panen raya dari berbagai dukuh dan desa wisata, diiringi alunan gamelan Jawa klasik dan tarian persembahan.</p>
-                                <span class="inline-block mt-2 text-sm bg-gray-100 text-gray-600 px-3 py-1 rounded-full"><i data-lucide="map-pin" class="w-3.5 h-3.5 inline mr-1 text-astagina-orange"></i>Lapangan Utama</span>
+                                <h4 class="text-xl font-bold text-gray-800">Parade Gunungan Tani & Pembukaan Agung</h4>
                             </div>
                         </div>
                         <!-- Item -->
                         <div class="flex flex-col md:flex-row gap-4 md:gap-8 items-start border-b border-gray-100 pb-6 last:border-0 last:pb-0">
                             <div class="text-astagina-green-dark font-bold text-xl shrink-0 w-32">10:00 - 17:00</div>
                             <div>
-                                <h4 class="text-xl font-bold text-gray-800 mb-2">Pasar Rakyat Wong Tani & Bazar UMKM</h4>
-                                <p class="text-gray-600">Pusat perbelanjaan produk pertanian organik unggulan, kerajinan tangan khas pedesaan, serta aneka kuliner tradisional legendaris Nusantara resmi beroperasi penuh.</p>
-                                <span class="inline-block mt-2 text-sm bg-gray-100 text-gray-600 px-3 py-1 rounded-full"><i data-lucide="map-pin" class="w-3.5 h-3.5 inline mr-1 text-astagina-orange"></i>Area Bazar & Stan</span>
+                                <h4 class="text-xl font-bold text-gray-800">Pasar Rakyat Wong Tani & Bazar UMKM</h4>
                             </div>
                         </div>
                         <!-- Item -->
                         <div class="flex flex-col md:flex-row gap-4 md:gap-8 items-start border-b border-gray-100 pb-6 last:border-0 last:pb-0">
                             <div class="text-astagina-green-dark font-bold text-xl shrink-0 w-32">19:30 - 22:00</div>
                             <div>
-                                <h4 class="text-xl font-bold text-gray-800 mb-2">Malam Pembukaan & Tari Persembahan Tradisional</h4>
-                                <p class="text-gray-600">Pertunjukan seni tari penyambutan tradisional Jawa klasik serta sambutan agung dari Popdarwis Desa Wisata Panusupan dan tokoh adat setempat.</p>
-                                <span class="inline-block mt-2 text-sm bg-gray-100 text-gray-600 px-3 py-1 rounded-full"><i data-lucide="map-pin" class="w-3.5 h-3.5 inline mr-1 text-astagina-orange"></i>Panggung Utama</span>
+                                <h4 class="text-xl font-bold text-gray-800">Malam Pembukaan & Tari Persembahan Tradisional</h4>
                             </div>
                         </div>
                     </div>
@@ -157,27 +152,21 @@
                         <div class="flex flex-col md:flex-row gap-4 md:gap-8 items-start border-b border-gray-100 pb-6 last:border-0 last:pb-0">
                             <div class="text-astagina-green-dark font-bold text-xl shrink-0 w-32">09:00 - 12:00</div>
                             <div>
-                                <h4 class="text-xl font-bold text-gray-800 mb-2">Bincang Tani (Rembug Tani) & Edukasi Organik</h4>
-                                <p class="text-gray-600">Forum diskusi interaktif antar kelompok tani mengenai pemanfaatan pupuk hayati alami dan prospek pertanian ramah lingkungan berkelanjutan.</p>
-                                <span class="inline-block mt-2 text-sm bg-gray-100 text-gray-600 px-3 py-1 rounded-full"><i data-lucide="map-pin" class="w-3.5 h-3.5 inline mr-1 text-astagina-orange"></i>Tenda Edukasi</span>
+                                <h4 class="text-xl font-bold text-gray-800">Bincang Tani (Rembug Tani) & Edukasi Organik</h4>
                             </div>
                         </div>
                         <!-- Item -->
                         <div class="flex flex-col md:flex-row gap-4 md:gap-8 items-start border-b border-gray-100 pb-6 last:border-0 last:pb-0">
                             <div class="text-astagina-green-dark font-bold text-xl shrink-0 w-32">13:00 - 16:00</div>
                             <div>
-                                <h4 class="text-xl font-bold text-gray-800 mb-2">Workshop Pembuatan Eco-Enzyme & Kompos Organik</h4>
-                                <p class="text-gray-600">Pelatihan praktis mengolah limbah organik rumah tangga dan perkebunan menjadi produk eco-enzyme serbaguna serta pupuk organik berkualitas tinggi.</p>
-                                <span class="inline-block mt-2 text-sm bg-gray-100 text-gray-600 px-3 py-1 rounded-full"><i data-lucide="map-pin" class="w-3.5 h-3.5 inline mr-1 text-astagina-orange"></i>Tenda Edukasi</span>
+                                <h4 class="text-xl font-bold text-gray-800">Workshop Pembuatan Eco-Enzyme & Kompos Organik</h4>
                             </div>
                         </div>
                         <!-- Item -->
                         <div class="flex flex-col md:flex-row gap-4 md:gap-8 items-start border-b border-gray-100 pb-6 last:border-0 last:pb-0">
                             <div class="text-astagina-green-dark font-bold text-xl shrink-0 w-32">19:30 - 22:00</div>
                             <div>
-                                <h4 class="text-xl font-bold text-gray-800 mb-2">Panggung Kesenian Calung Banyumasan</h4>
-                                <p class="text-gray-600">Pementasan musik tradisional calung Banyumasan yang khas, dipadukan dengan tarian komedi lengger yang menghibur seluruh pengunjung.</p>
-                                <span class="inline-block mt-2 text-sm bg-gray-100 text-gray-600 px-3 py-1 rounded-full"><i data-lucide="map-pin" class="w-3.5 h-3.5 inline mr-1 text-astagina-orange"></i>Panggung Utama</span>
+                                <h4 class="text-xl font-bold text-gray-800">Panggung Kesenian Calung Banyumasan</h4>
                             </div>
                         </div>
                     </div>
@@ -195,27 +184,21 @@
                         <div class="flex flex-col md:flex-row gap-4 md:gap-8 items-start border-b border-gray-100 pb-6 last:border-0 last:pb-0">
                             <div class="text-astagina-green-dark font-bold text-xl shrink-0 w-32">08:30 - 11:30</div>
                             <div>
-                                <h4 class="text-xl font-bold text-gray-800 mb-2">Lomba Melukis Caping & Menghias Egrang</h4>
-                                <p class="text-gray-600">Ajang kreativitas menggambar bagi anak-anak sekolah dasar dan pemuda desa untuk menuangkan seni visual pada media caping tani dan egrang kayu.</p>
-                                <span class="inline-block mt-2 text-sm bg-gray-100 text-gray-600 px-3 py-1 rounded-full"><i data-lucide="map-pin" class="w-3.5 h-3.5 inline mr-1 text-astagina-orange"></i>Area Selasar Stan</span>
+                                <h4 class="text-xl font-bold text-gray-800">Lomba Melukis Caping & Menghias Egrang</h4>
                             </div>
                         </div>
                         <!-- Item -->
                         <div class="flex flex-col md:flex-row gap-4 md:gap-8 items-start border-b border-gray-100 pb-6 last:border-0 last:pb-0">
                             <div class="text-astagina-green-dark font-bold text-xl shrink-0 w-32">13:30 - 16:30</div>
                             <div>
-                                <h4 class="text-xl font-bold text-gray-800 mb-2">Demo Memasak Pangan Alternatif Nusantara</h4>
-                                <p class="text-gray-600">Live cooking show pembuatan berbagai kreasi kuliner sehat dan lezat berbasis bahan ketela, jagung, dan suweg organik dari tanah Banyumas.</p>
-                                <span class="inline-block mt-2 text-sm bg-gray-100 text-gray-600 px-3 py-1 rounded-full"><i data-lucide="map-pin" class="w-3.5 h-3.5 inline mr-1 text-astagina-orange"></i>Area Kuliner</span>
+                                <h4 class="text-xl font-bold text-gray-800">Demo Memasak Pangan Alternatif Nusantara</h4>
                             </div>
                         </div>
                         <!-- Item -->
                         <div class="flex flex-col md:flex-row gap-4 md:gap-8 items-start border-b border-gray-100 pb-6 last:border-0 last:pb-0">
                             <div class="text-astagina-green-dark font-bold text-xl shrink-0 w-32">19:30 - 22:00</div>
                             <div>
-                                <h4 class="text-xl font-bold text-gray-800 mb-2">Pementasan Ketoprak (Teater Rakyat)</h4>
-                                <p class="text-gray-600">Pertunjukan teater tradisional ketoprak yang membawakan lakon sejarah kerajaan Nusantara dan kearifan agraris masa lampau.</p>
-                                <span class="inline-block mt-2 text-sm bg-gray-100 text-gray-600 px-3 py-1 rounded-full"><i data-lucide="map-pin" class="w-3.5 h-3.5 inline mr-1 text-astagina-orange"></i>Panggung Utama</span>
+                                <h4 class="text-xl font-bold text-gray-800">Pementasan Ketoprak (Teater Rakyat)</h4>
                             </div>
                         </div>
                     </div>
@@ -233,27 +216,21 @@
                         <div class="flex flex-col md:flex-row gap-4 md:gap-8 items-start border-b border-gray-100 pb-6 last:border-0 last:pb-0">
                             <div class="text-astagina-green-dark font-bold text-xl shrink-0 w-32">09:00 - 12:00</div>
                             <div>
-                                <h4 class="text-xl font-bold text-gray-800 mb-2">Sarasehan Budaya & Kemitraan UMKM</h4>
-                                <p class="text-gray-600">Pertemuan hangat antara pelaku pariwisata pedesaan, pemangku kebijakan, dan UMKM lokal guna mempererat sinergi ekonomi kreatif daerah.</p>
-                                <span class="inline-block mt-2 text-sm bg-gray-100 text-gray-600 px-3 py-1 rounded-full"><i data-lucide="map-pin" class="w-3.5 h-3.5 inline mr-1 text-astagina-orange"></i>Tenda Edukasi</span>
+                                <h4 class="text-xl font-bold text-gray-800">Sarasehan Budaya & Kemitraan UMKM</h4>
                             </div>
                         </div>
                         <!-- Item -->
                         <div class="flex flex-col md:flex-row gap-4 md:gap-8 items-start border-b border-gray-100 pb-6 last:border-0 last:pb-0">
                             <div class="text-astagina-green-dark font-bold text-xl shrink-0 w-32">13:30 - 15:30</div>
                             <div>
-                                <h4 class="text-xl font-bold text-gray-800 mb-2">Workshop Fotografi Lanskap Desa & Produk UMKM</h4>
-                                <p class="text-gray-600">Kelas visual singkat teknik memotret panorama sawah pedesaan yang menakjubkan serta foto kemasan produk dagang agar bernilai estetis tinggi.</p>
-                                <span class="inline-block mt-2 text-sm bg-gray-100 text-gray-600 px-3 py-1 rounded-full"><i data-lucide="map-pin" class="w-3.5 h-3.5 inline mr-1 text-astagina-orange"></i>Tenda Edukasi</span>
+                                <h4 class="text-xl font-bold text-gray-800">Workshop Fotografi Lanskap Desa & Produk UMKM</h4>
                             </div>
                         </div>
                         <!-- Item -->
                         <div class="flex flex-col md:flex-row gap-4 md:gap-8 items-start border-b border-gray-100 pb-6 last:border-0 last:pb-0">
                             <div class="text-astagina-green-dark font-bold text-xl shrink-0 w-32">19:30 - 22:30</div>
                             <div>
-                                <h4 class="text-xl font-bold text-gray-800 mb-2">Panggung Kesenian Kuda Kepang / Ebeg</h4>
-                                <p class="text-gray-600">Pementasan tari magis tradisional kuda kepang khas Banyumasan (Ebeg) yang dinamis, mistis, dan sarat akan kekayaan budaya luhur.</p>
-                                <span class="inline-block mt-2 text-sm bg-gray-100 text-gray-600 px-3 py-1 rounded-full"><i data-lucide="map-pin" class="w-3.5 h-3.5 inline mr-1 text-astagina-orange"></i>Lapangan Utama</span>
+                                <h4 class="text-xl font-bold text-gray-800">Panggung Kesenian Kuda Kepang / Ebeg</h4>
                             </div>
                         </div>
                     </div>
@@ -271,27 +248,21 @@
                         <div class="flex flex-col md:flex-row gap-4 md:gap-8 items-start border-b border-gray-100 pb-6 last:border-0 last:pb-0">
                             <div class="text-astagina-green-dark font-bold text-xl shrink-0 w-32">09:00 - 11:00</div>
                             <div>
-                                <h4 class="text-xl font-bold text-gray-800 mb-2">Gelar Seni Karawitan Popdarwis</h4>
-                                <p class="text-gray-600">Alunan musik instrumen gamelan klasik yang menenangkan jiwa, dibawakan langsung oleh perkumpulan karawitan remaja Desa Panusupan.</p>
-                                <span class="inline-block mt-2 text-sm bg-gray-100 text-gray-600 px-3 py-1 rounded-full"><i data-lucide="map-pin" class="w-3.5 h-3.5 inline mr-1 text-astagina-orange"></i>Panggung Utama</span>
+                                <h4 class="text-xl font-bold text-gray-800">Gelar Seni Karawitan Pokdarwis</h4>
                             </div>
                         </div>
                         <!-- Item -->
                         <div class="flex flex-col md:flex-row gap-4 md:gap-8 items-start border-b border-gray-100 pb-6 last:border-0 last:pb-0">
                             <div class="text-astagina-green-dark font-bold text-xl shrink-0 w-32">13:30 - 17:00</div>
                             <div>
-                                <h4 class="text-xl font-bold text-gray-800 mb-2">Bazar Benih Unggul & Klinik Konsultasi Tani Gratis</h4>
-                                <p class="text-gray-600">Distribusi benih tanaman pertanian unggul berkualitas tinggi serta konsultasi keluhan pertanian gratis bersama para penyuluh pertanian berpengalaman.</p>
-                                <span class="inline-block mt-2 text-sm bg-gray-100 text-gray-600 px-3 py-1 rounded-full"><i data-lucide="map-pin" class="w-3.5 h-3.5 inline mr-1 text-astagina-orange"></i>Area Bazar & Stan</span>
+                                <h4 class="text-xl font-bold text-gray-800">Bazar Benih Unggul & Klinik Konsultasi Tani Gratis</h4>
                             </div>
                         </div>
                         <!-- Item -->
                         <div class="flex flex-col md:flex-row gap-4 md:gap-8 items-start border-b border-gray-100 pb-6 last:border-0 last:pb-0">
                             <div class="text-astagina-green-dark font-bold text-xl shrink-0 w-32">19:30 - 23:00</div>
                             <div>
-                                <h4 class="text-xl font-bold text-gray-800 mb-2">Pergelaran Wayang Kulit Semalam Suntuk</h4>
-                                <p class="text-gray-600">Pergelaran wayang kulit legendaris bersama dalang kondang daerah membawakan cerita kemakmuran bumi Nusantara.</p>
-                                <span class="inline-block mt-2 text-sm bg-gray-100 text-gray-600 px-3 py-1 rounded-full"><i data-lucide="map-pin" class="w-3.5 h-3.5 inline mr-1 text-astagina-orange"></i>Panggung Utama</span>
+                                <h4 class="text-xl font-bold text-gray-800">Pergelaran Wayang Kulit Semalam Suntuk</h4>
                             </div>
                         </div>
                     </div>
@@ -309,27 +280,21 @@
                         <div class="flex flex-col md:flex-row gap-4 md:gap-8 items-start border-b border-gray-100 pb-6 last:border-0 last:pb-0">
                             <div class="text-astagina-green-dark font-bold text-xl shrink-0 w-32">07:30 - 10:00</div>
                             <div>
-                                <h4 class="text-xl font-bold text-gray-800 mb-2">Jalan Sehat & Senam Wong Tani</h4>
-                                <p class="text-gray-600">Kegiatan olahraga pagi jalan sehat santai dan senam bersama warga lokal serta wisatawan, bertabur undian doorprize alat-alat tani modern.</p>
-                                <span class="inline-block mt-2 text-sm bg-gray-100 text-gray-600 px-3 py-1 rounded-full"><i data-lucide="map-pin" class="w-3.5 h-3.5 inline mr-1 text-astagina-orange"></i>Lapangan Utama</span>
+                                <h4 class="text-xl font-bold text-gray-800">Jalan Sehat & Senam Wong Tani</h4>
                             </div>
                         </div>
                         <!-- Item -->
                         <div class="flex flex-col md:flex-row gap-4 md:gap-8 items-start border-b border-gray-100 pb-6 last:border-0 last:pb-0">
                             <div class="text-astagina-green-dark font-bold text-xl shrink-0 w-32">10:00 - 14:00</div>
                             <div>
-                                <h4 class="text-xl font-bold text-gray-800 mb-2">Grebeg Gunungan & Rebutan Hasil Bumi</h4>
-                                <p class="text-gray-600">Puncak festival berupa ritual selamatan ucapan puji syukur panen raya agung, diakhiri rebutan gunungan hasil bumi segar yang membawa berkah.</p>
-                                <span class="inline-block mt-2 text-sm bg-gray-100 text-gray-600 px-3 py-1 rounded-full"><i data-lucide="map-pin" class="w-3.5 h-3.5 inline mr-1 text-astagina-orange"></i>Lapangan Utama</span>
+                                <h4 class="text-xl font-bold text-gray-800">Grebeg Gunungan & Rebutan Hasil Bumi</h4>
                             </div>
                         </div>
                         <!-- Item -->
                         <div class="flex flex-col md:flex-row gap-4 md:gap-8 items-start border-b border-gray-100 pb-6 last:border-0 last:pb-0">
                             <div class="text-astagina-green-dark font-bold text-xl shrink-0 w-32">19:30 - 22:00</div>
                             <div>
-                                <h4 class="text-xl font-bold text-gray-800 mb-2">Malam Apresiasi & Penutupan Astagina Fest</h4>
-                                <p class="text-gray-600">Malam penyerahan plakat penghargaan pelaku UMKM & stand terbaik, pengumuman juara lomba caping, dimeriahkan pentas musik akustik etnik.</p>
-                                <span class="inline-block mt-2 text-sm bg-gray-100 text-gray-600 px-3 py-1 rounded-full"><i data-lucide="map-pin" class="w-3.5 h-3.5 inline mr-1 text-astagina-orange"></i>Panggung Utama</span>
+                                <h4 class="text-xl font-bold text-gray-800">Malam Apresiasi & Penutupan Astagina Fest</h4>
                             </div>
                         </div>
                     </div>
@@ -348,7 +313,7 @@
                     <img src="assets/img/logo/logo.png" alt="Logo Wong Tani" class="w-12 h-12 rounded-xl bg-white p-1 object-contain">
                     <div class="flex flex-col text-left">
                         <span class="font-bold text-[#EAB308] leading-tight text-lg font-['Playfair_Display'] uppercase tracking-wider">ASTAGINA</span>
-                        <span class="text-xs text-gray-400 font-medium">Popdarwis Desa Panusupan</span>
+                        <span class="text-xs text-gray-400 font-medium">Pokdarwis Desa Panusupan</span>
                     </div>
                 </div>
                 <p class="text-gray-400 text-sm mb-6 leading-relaxed font-['Outfit']">
@@ -383,7 +348,7 @@
                 <ul class="grid grid-cols-2 gap-x-4 gap-y-2.5 text-gray-400 font-['Outfit'] text-sm">
                     <li><a href="index.html" class="hover:text-[#EAB308] transition-colors duration-300">Beranda</a></li>
                     <li><a href="tentang.html" class="hover:text-[#EAB308] transition-colors duration-300">Tentang</a></li>
-                    <li><a href="jadwal.html" class="hover:text-[#EAB308] transition-colors duration-300">Jadwal</a></li>
+                    <li><a href="kegiatan.html" class="hover:text-[#EAB308] transition-colors duration-300">Kegiatan</a></li>
                     <li><a href="index.html#pengisi" class="hover:text-[#EAB308] transition-colors duration-300">Pengisi Acara</a></li>
                     <li><a href="stand.html" class="hover:text-[#EAB308] transition-colors duration-300">Stand</a></li>
                     <li><a href="merchandise.html" class="hover:text-[#EAB308] transition-colors duration-300">Merchandise</a></li>
