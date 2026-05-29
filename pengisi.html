@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengisi Acara & Budaya - Astagina Fest</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'astagina-green': '#4f7942',
+                        'astagina-green-dark': '#3a5c31',
+                        'astagina-brown': '#8b5a2b',
+                        'astagina-cream': '#fbf9f6',
+                        'astagina-orange': '#d2691e',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        .filter-pill {
+            background-color: #f3f4f6;
+            color: #4b5563;
+            border: 1px solid #e5e7eb;
+            padding: 8px 20px !important;
+            cursor: pointer !important;
+        }
+        .filter-pill:hover {
+            background-color: #e5e7eb;
+            color: #1f2937;
+        }
+        .filter-pill.active {
+            background-color: #3a5c31;
+            color: #ffffff !important;
+            border-color: #3a5c31;
+            box-shadow: 0 4px 12px rgba(58, 92, 49, 0.2);
+        }
+    </style>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/logo/logo.png">
+</head>
+<body class="antialiased bg-white">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar scrolled !bg-astagina-cream !shadow-sm !py-3">
+        <div class="container-custom flex justify-between items-center w-full relative">
+            <!-- Left Logo Block -->
+            <div class="flex-1 flex justify-start">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="assets/img/logo/logo.png" alt="Logo Astagina" class="w-10 h-10 object-contain shrink-0">
+                    <div class="flex flex-col text-left">
+                        <span class="font-bold logo-title text-astagina-green-dark leading-tight text-sm md:text-base uppercase tracking-wider">ASTAGINA</span>
+                        <span class="text-[10px] md:text-xs logo-subtitle text-astagina-orange leading-tight font-medium">Pokdarwis Desa Panusupan</span>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Center Menu (Desktop) -->
+            <div class="hidden lg:flex lg:absolute lg:left-1/2 lg:-translate-x-1/2 justify-center items-center gap-6">
+                <a href="index.html" class="nav-link !text-gray-800 hover:!text-astagina-orange">Beranda</a>
+                <a href="tentang.html" class="nav-link !text-gray-800 hover:!text-astagina-orange">Tentang</a>
+                <a href="kegiatan.html" class="nav-link !text-gray-800 hover:!text-astagina-orange">Kegiatan</a>
+                <a href="jadwal.html" class="nav-link !text-gray-800 hover:!text-astagina-orange">Jadwal</a>
+                <a href="pengisi.html" class="nav-link !text-astagina-orange font-semibold">Pengisi Acara</a>
+                <a href="stand.html" class="nav-link !text-gray-800 hover:!text-astagina-orange">Stand</a>
+                <a href="merchandise.html" class="nav-link !text-gray-800 hover:!text-astagina-orange">Merchandise</a>
+                <a href="homestay.html" class="nav-link !text-gray-800 hover:!text-astagina-orange">Home Stay</a>
+                <a href="galeri.html" class="nav-link !text-gray-800 hover:!text-astagina-orange">Galeri</a>
+                <a href="lokasi.html" class="nav-link !text-gray-800 hover:!text-astagina-orange">Lokasi</a>
+            </div>
+            
+            <!-- Right CTA Button (Desktop) -->
+            <div class="flex-1 hidden lg:flex justify-end">
+                <a href="lokasi.html" class="bg-astagina-orange hover:bg-opacity-90 text-white font-bold px-6 py-2.5 rounded-full text-sm transition shadow-sm inline-flex items-center gap-2">
+                    <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.458L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.97C16.638 1.98 14.162.95 11.54.95c-5.417 0-9.841 4.372-9.846 9.802-.002 1.802.484 3.55 1.408 5.11L2.082 21.94l6.082-1.587-1.517-.799zm9.53-5.733c-.266-.134-1.577-.779-1.821-.867-.244-.088-.423-.133-.6.134-.177.266-.688.867-.843 1.045-.155.177-.311.2-.577.067-.266-.134-1.125-.415-2.143-1.323-.79-.705-1.325-1.577-1.48-1.843-.155-.266-.017-.41.117-.543.12-.12.266-.31.4-.466.135-.156.18-.266.27-.445.09-.178.045-.334-.022-.467-.067-.134-.6-1.446-.823-1.98-.217-.52-.437-.45-.6-.458-.155-.007-.333-.008-.511-.008-.178 0-.466.067-.71.334-.244.266-.93.91-.93 2.22 0 1.31.953 2.576 1.087 2.754.133.178 1.875 2.863 4.542 4.01 2.668 1.147 2.668.766 3.149.72.482-.045 1.577-.644 1.8-.1.222-.556.222-.1.222-.266-.067-.266-.178-.422-.422z"/></svg>
+                    <span>Hubungi Kami</span>
+                </a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="lg:hidden text-gray-800 focus:outline-none ml-auto">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-50 flex-col px-6 py-8 hidden">
+        <div class="flex justify-between items-center mb-10">
+            <span class="text-astagina-green-dark font-bold text-xl" style="font-family: 'Playfair Display', serif;">Astagina Fest</span>
+            <button id="mobile-menu-close" class="text-gray-800 focus:outline-none">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+        </div>
+        <div class="flex flex-col gap-5 text-lg font-medium text-gray-800">
+            <a href="index.html" class="hover:text-astagina-orange">Beranda</a>
+            <a href="tentang.html" class="hover:text-astagina-orange">Tentang</a>
+            <a href="kegiatan.html" class="hover:text-astagina-orange">Kegiatan</a>
+            <a href="jadwal.html" class="hover:text-astagina-orange">Jadwal</a>
+            <a href="pengisi.html" class="text-astagina-orange font-semibold">Pengisi Acara</a>
+            <a href="stand.html" class="hover:text-astagina-orange">Stand</a>
+            <a href="merchandise.html" class="hover:text-astagina-orange">Merchandise</a>
+            <a href="homestay.html" class="hover:text-astagina-orange">Home Stay</a>
+            <a href="galeri.html" class="hover:text-astagina-orange">Galeri</a>
+            <a href="lokasi.html" class="hover:text-astagina-orange">Lokasi</a>
+            <a href="lokasi.html" class="bg-astagina-orange text-white font-bold py-3 rounded-full text-sm mt-4 shadow-sm flex items-center justify-center gap-2">
+                <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.458L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.97C16.638 1.98 14.162.95 11.54.95c-5.417 0-9.841 4.372-9.846 9.802-.002 1.802.484 3.55 1.408 5.11L2.082 21.94l6.082-1.587-1.517-.799zm9.53-5.733c-.266-.134-1.577-.779-1.821-.867-.244-.088-.423-.133-.6.134-.177.266-.688.867-.843 1.045-.155.177-.311.2-.577.067-.266-.134-1.125-.415-2.143-1.323-.79-.705-1.325-1.577-1.48-1.843-.155-.266-.017-.41.117-.543.12-.12.266-.31.4-.466.135-.156.18-.266.27-.445.09-.178.045-.334-.022-.467-.067-.134-.6-1.446-.823-1.98-.217-.52-.437-.45-.6-.458-.155-.007-.333-.008-.511-.008-.178 0-.466.067-.71.334-.244.266-.93.91-.93 2.22 0 1.31.953 2.576 1.087 2.754.133.178 1.875 2.863 4.542 4.01 2.668 1.147 2.668.766 3.149.72.482-.045 1.577-.644 1.8-.1.222-.556.222-.1.222-.266-.067-.266-.178-.422-.422z"/></svg>
+                <span>Hubungi Kami</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="pt-32 pb-16 bg-astagina-cream text-center relative overflow-hidden">
+        <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle at 20% 30%, var(--astagina-green) 1px, transparent 1px), radial-gradient(circle at 75% 80%, var(--astagina-green) 1px, transparent 1px); background-size: 24px 24px;"></div>
+        <div class="container-custom relative z-10" data-aos="fade-up">
+            <span class="text-xs font-bold text-astagina-orange uppercase tracking-widest mb-3 block">Pentas Budaya Nusantara</span>
+            <h1 class="font-['Playfair_Display'] text-4xl md:text-5xl font-bold text-astagina-green-dark mb-4">Pengisi Acara & Budaya</h1>
+            <p class="text-gray-600 text-base md:text-lg max-w-3xl mx-auto px-4 leading-relaxed font-['Outfit']">
+                Temukan 20 rangkaian kegiatan kebudayaan terlengkap dari para seniman luhur dan pegiat tradisi yang menghidupkan kemegahan festival Wong Tani di Desa Panusupan.
+            </p>
+        </div>
+    </header>
+
+    <!-- Filters and Activities Section -->
+    <section class="py-16 bg-gray-50/50">
+        <div class="container-custom px-4">
+            
+            <!-- Search & Filters Container -->
+            <div class="max-w-6xl mx-auto mb-12" data-aos="fade-up">
+                
+
+                <!-- Day Filter Buttons -->
+                <div>
+                    <span class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3.5 block font-['Outfit']">Pilih Hari Pelaksanaan</span>
+                    <div class="flex flex-wrap gap-2.5" id="day-filters">
+                        <button onclick="filterDay('Semua', this)" class="filter-pill active px-4.5 py-2 rounded-full text-sm font-semibold transition-all duration-300">Semua Hari</button>
+                        <button onclick="filterDay('Hari 1', this)" class="filter-pill px-4.5 py-2 rounded-full text-sm font-semibold transition-all duration-300">Hari 1 (Senin)</button>
+                        <button onclick="filterDay('Hari 2', this)" class="filter-pill px-4.5 py-2 rounded-full text-sm font-semibold transition-all duration-300">Hari 2 (Selasa)</button>
+                        <button onclick="filterDay('Hari 3', this)" class="filter-pill px-4.5 py-2 rounded-full text-sm font-semibold transition-all duration-300">Hari 3 (Rabu)</button>
+                        <button onclick="filterDay('Hari 4', this)" class="filter-pill px-4.5 py-2 rounded-full text-sm font-semibold transition-all duration-300">Hari 4 (Kamis)</button>
+                        <button onclick="filterDay('Hari 5', this)" class="filter-pill px-4.5 py-2 rounded-full text-sm font-semibold transition-all duration-300">Hari 5 (Jumat)</button>
+                        <button onclick="filterDay('Hari 6', this)" class="filter-pill px-4.5 py-2 rounded-full text-sm font-semibold transition-all duration-300">Hari 6 (Sabtu)</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Activities Cards Grid -->
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="activities-grid">
+                    
+                    <!-- Card 1 -->
+                    <div class="activity-card group bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 flex flex-col transition duration-300" 
+                         data-category="Tradisi Adat" data-day="Hari 1" data-aos="fade-up">
+                        <div class="h-52 overflow-hidden relative">
+                            <img src="assets/img/gallery/about_festival.png" alt="Ziarah dan Doa Bersama" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                            <div class="absolute bottom-4 left-4 bg-astagina-green text-white px-3.5 py-1 rounded-full text-xs font-bold shadow-sm">
+                                Tradisi Adat
+                            </div>
+                        </div>
+                        <div class="p-6 md:p-8 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center gap-2 mb-2.5">
+                                    <span class="text-xs font-bold text-astagina-orange bg-orange-50 px-2.5 py-1 rounded-md">Hari 1</span>
+                                    <span class="text-xs text-gray-400 font-medium">07.00 - 08.00 WIB</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-3 font-['Playfair_Display']">Ziarah dan Doa Bersama</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed font-['Outfit']">Ziarah ke makam sesepuh Desa Panusupan dipimpin oleh Ketua Syuriah NU Kyai Soleh Sulkhani, memohon doa keselamatan demi kelancaran festival.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="activity-card group bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 flex flex-col transition duration-300" 
+                         data-category="Tradisi Adat" data-day="Hari 1" data-aos="fade-up" data-aos-delay="100">
+                        <div class="h-52 overflow-hidden relative">
+                            <img src="assets/img/gallery/1.png" alt="Prosesi Pembukaan Acara dan Jamasan Pusaka" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                            <div class="absolute bottom-4 left-4 bg-astagina-green text-white px-3.5 py-1 rounded-full text-xs font-bold shadow-sm">
+                                Tradisi Adat
+                            </div>
+                        </div>
+                        <div class="p-6 md:p-8 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center gap-2 mb-2.5">
+                                    <span class="text-xs font-bold text-astagina-orange bg-orange-50 px-2.5 py-1 rounded-md">Hari 1</span>
+                                    <span class="text-xs text-gray-400 font-medium">09.00 - 11.30 WIB</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-3 font-['Playfair_Display']">Prosesi Pembukaan & Jamasan Pusaka</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed font-['Outfit']">Upacara pensucian pusaka peninggalan leluhur dilanjutkan Sedekah Bumi yang dipimpin langsung oleh PJ Kepala Desa Panusupan, Bapak Tarwoto, S.E.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="activity-card group bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 flex flex-col transition duration-300" 
+                         data-category="Kirab Budaya" data-day="Hari 1" data-aos="fade-up" data-aos-delay="200">
+                        <div class="h-52 overflow-hidden relative">
+                            <img src="assets/img/gallery/reog.png" alt="Prosesi Pawai Gunungan" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                            <div class="absolute bottom-4 left-4 bg-astagina-orange text-white px-3.5 py-1 rounded-full text-xs font-bold shadow-sm">
+                                Kirab Budaya
+                            </div>
+                        </div>
+                        <div class="p-6 md:p-8 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center gap-2 mb-2.5">
+                                    <span class="text-xs font-bold text-astagina-orange bg-orange-50 px-2.5 py-1 rounded-md">Hari 1</span>
+                                    <span class="text-xs text-gray-400 font-medium">13.00 - 15.00 WIB</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-3 font-['Playfair_Display']">Prosesi Pawai Gunungan</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed font-['Outfit']">Arak-arakan gunungan hasil bumi raksasa dari Balai Desa menuju Lapangan Utama oleh warga dusun berpakaian adat lengkap.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="activity-card group bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 flex flex-col transition duration-300" 
+                         data-category="Seni Tari" data-day="Hari 1" data-aos="fade-up">
+                        <div class="h-52 overflow-hidden relative">
+                            <img src="assets/img/gallery/tari.png" alt="Pertunjukan Sendra Tari Lembah Trenggulun Daki" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                            <div class="absolute bottom-4 left-4 bg-[#6366f1] text-white px-3.5 py-1 rounded-full text-xs font-bold shadow-sm">
+                                Seni Tari
+                            </div>
+                        </div>
+                        <div class="p-6 md:p-8 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center gap-2 mb-2.5">
+                                    <span class="text-xs font-bold text-astagina-orange bg-orange-50 px-2.5 py-1 rounded-md">Hari 1</span>
+                                    <span class="text-xs text-gray-400 font-medium">19.30 - 22.00 WIB</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-3 font-['Playfair_Display']">Sendra Tari Lembah Trenggulun</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed font-['Outfit']">Drama tari kolosal bertajuk "Bisik Nurani Kawula Tani" yang dipentaskan oleh ratusan seniman bertalenta se-Kabupaten Banyumas.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="activity-card group bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 flex flex-col transition duration-300" 
+                         data-category="Lomba & Olahraga" data-day="Hari 2" data-aos="fade-up" data-aos-delay="100">
+                        <div class="h-52 overflow-hidden relative">
+                            <img src="assets/img/gallery/2.png" alt="Senam Massal" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                            <div class="absolute bottom-4 left-4 bg-amber-600 text-white px-3.5 py-1 rounded-full text-xs font-bold shadow-sm">
+                                Lomba & Olahraga
+                            </div>
+                        </div>
+                        <div class="p-6 md:p-8 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center gap-2 mb-2.5">
+                                    <span class="text-xs font-bold text-astagina-orange bg-orange-50 px-2.5 py-1 rounded-md">Hari 2</span>
+                                    <span class="text-xs text-gray-400 font-medium">06.30 - 07.30 WIB</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-3 font-['Playfair_Display']">Senam Massal</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed font-['Outfit']">Kegiatan kebugaran jasmani bersama seluruh warga desa di pagi hari yang cerah untuk membangkitkan semangat kebersamaan.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="activity-card group bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 flex flex-col transition duration-300" 
+                         data-category="Lomba & Olahraga" data-day="Hari 2" data-aos="fade-up" data-aos-delay="200">
+                        <div class="h-52 overflow-hidden relative">
+                            <img src="assets/img/gallery/3.png" alt="Jalan Sehat Wong Tani" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                            <div class="absolute bottom-4 left-4 bg-amber-600 text-white px-3.5 py-1 rounded-full text-xs font-bold shadow-sm">
+                                Lomba & Olahraga
+                            </div>
+                        </div>
+                        <div class="p-6 md:p-8 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center gap-2 mb-2.5">
+                                    <span class="text-xs font-bold text-astagina-orange bg-orange-50 px-2.5 py-1 rounded-md">Hari 2</span>
+                                    <span class="text-xs text-gray-400 font-medium">07.30 - 12.00 WIB</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-3 font-['Playfair_Display']">Jalan Sehat Wong Tani</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed font-['Outfit']">Jalan sehat menyusuri keindahan persawahan Panusupan, dimeriahkan pembagian aneka doorprize menarik untuk peserta.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 7 -->
+                    <div class="activity-card group bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 flex flex-col transition duration-300" 
+                         data-category="Kesenian Rakyat" data-day="Hari 2" data-aos="fade-up">
+                        <div class="h-52 overflow-hidden relative">
+                            <img src="assets/img/gallery/penari_topeng.png" alt="Ebeg Kontemporer Banyumasan Wahyu Mugi Lestari" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                            <div class="absolute bottom-4 left-4 bg-astagina-brown text-white px-3.5 py-1 rounded-full text-xs font-bold shadow-sm">
+                                Kesenian Rakyat
+                            </div>
+                        </div>
+                        <div class="p-6 md:p-8 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center gap-2 mb-2.5">
+                                    <span class="text-xs font-bold text-astagina-orange bg-orange-50 px-2.5 py-1 rounded-md">Hari 2</span>
+                                    <span class="text-xs text-gray-400 font-medium">13.00 - 16.00 WIB</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-3 font-['Playfair_Display']">Ebeg Kontemporer Banyumasan</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed font-['Outfit']">Pagelaran seni ebeg (kuda lumping) tradisional dengan aransemen kontemporer yang dinamis dan penuh energi magis.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 8 -->
+                    <div class="activity-card group bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 flex flex-col transition duration-300" 
+                         data-category="Festival Api" data-day="Hari 2" data-aos="fade-up" data-aos-delay="100">
+                        <div class="h-52 overflow-hidden relative">
+                            <img src="assets/img/gallery/teater.png" alt="Festival Lentera Kalpa" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                            <div class="absolute bottom-4 left-4 bg-astagina-orange text-white px-3.5 py-1 rounded-full text-xs font-bold shadow-sm">
+                                Festival Api
+                            </div>
+                        </div>
+                        <div class="p-6 md:p-8 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center gap-2 mb-2.5">
+                                    <span class="text-xs font-bold text-astagina-orange bg-orange-50 px-2.5 py-1 rounded-md">Hari 2</span>
+                                    <span class="text-xs text-gray-400 font-medium">19.00 - 21.00 WIB</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-3 font-['Playfair_Display']">Festival Lentera Kalpa</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed font-['Outfit']">Atraksi spektakuler tarian api, permainan obor tradisional, dan formasi Abid yang menghiasi kegelapan malam pedesaan.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 9 -->
+                    <div class="activity-card group bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 flex flex-col transition duration-300" 
+                         data-category="Panggung Musik" data-day="Hari 2" data-aos="fade-up" data-aos-delay="200">
+                        <div class="h-52 overflow-hidden relative">
+                            <img src="assets/img/gallery/musik_etnik.png" alt="Pentas Musik Lembah Unjawala" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                            <div class="absolute bottom-4 left-4 bg-[#ec4899] text-white px-3.5 py-1 rounded-full text-xs font-bold shadow-sm">
+                                Panggung Musik
+                            </div>
+                        </div>
+                        <div class="p-6 md:p-8 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center gap-2 mb-2.5">
+                                    <span class="text-xs font-bold text-astagina-orange bg-orange-50 px-2.5 py-1 rounded-md">Hari 2</span>
+                                    <span class="text-xs text-gray-400 font-medium">21.00 - 23.00 WIB</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-3 font-['Playfair_Display']">Pentas Musik Lembah Unjawala</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed font-['Outfit']">Konser musik bertajuk "Harmoni Sinar dalam Dekapan Alam Trenggulun" sebagai panggung ekspresi kreatif pemuda.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 10 -->
+                    <div class="activity-card group bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 flex flex-col transition duration-300" 
+                         data-category="Panggung Musik" data-day="Hari 3" data-aos="fade-up">
+                        <div class="h-52 overflow-hidden relative">
+                            <img src="assets/img/gallery/angklung.png" alt="Symphoni Dromenan" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                            <div class="absolute bottom-4 left-4 bg-[#ec4899] text-white px-3.5 py-1 rounded-full text-xs font-bold shadow-sm">
+                                Panggung Musik
+                            </div>
+                        </div>
+                        <div class="p-6 md:p-8 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center gap-2 mb-2.5">
+                                    <span class="text-xs font-bold text-astagina-orange bg-orange-50 px-2.5 py-1 rounded-md">Hari 3</span>
+                                    <span class="text-xs text-gray-400 font-medium">08.00 - 11.30 WIB</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-3 font-['Playfair_Display']">Symphoni Dromenan</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed font-['Outfit']">Ansambel musik tiup bambu tradisional khas pedesaan Banyumasan yang menyuarakan melodi alam pegeseran yang syahdu.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 11 -->
+                    <div class="activity-card group bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 flex flex-col transition duration-300" 
+                         data-category="Kesenian Rakyat" data-day="Hari 3" data-aos="fade-up" data-aos-delay="100">
+                        <div class="h-52 overflow-hidden relative">
+                            <img src="assets/img/gallery/penari_topeng.png" alt="Pentas Seni Kuda Lumping" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                            <div class="absolute bottom-4 left-4 bg-astagina-brown text-white px-3.5 py-1 rounded-full text-xs font-bold shadow-sm">
+                                Kesenian Rakyat
+                            </div>
+                        </div>
+                        <div class="p-6 md:p-8 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center gap-2 mb-2.5">
+                                    <span class="text-xs font-bold text-astagina-orange bg-orange-50 px-2.5 py-1 rounded-md">Hari 3</span>
+                                    <span class="text-xs text-gray-400 font-medium">13.00 - 16.00 WIB</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-3 font-['Playfair_Display']">Pentas Seni Kuda Lumping</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed font-['Outfit']">Atraksi kesenian rakyat kuda kepang manunggal dengan iringan gamelan calung banyumasan berirama riang.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 12 -->
+                    <div class="activity-card group bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 flex flex-col transition duration-300" 
+                         data-category="Tari Pergaulan" data-day="Hari 3" data-aos="fade-up" data-aos-delay="200">
+                        <div class="h-52 overflow-hidden relative">
+                            <img src="assets/img/gallery/gamelan.png" alt="Barongsai dan Ronggeng" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                            <div class="absolute bottom-4 left-4 bg-[#14b8a6] text-white px-3.5 py-1 rounded-full text-xs font-bold shadow-sm">
+                                Tari Pergaulan
+                            </div>
+                        </div>
+                        <div class="p-6 md:p-8 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center gap-2 mb-2.5">
+                                    <span class="text-xs font-bold text-astagina-orange bg-orange-50 px-2.5 py-1 rounded-md">Hari 3</span>
+                                    <span class="text-xs text-gray-400 font-medium">19.30 - 23.00 WIB</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-3 font-['Playfair_Display']">Barongsai & Ronggeng</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed font-['Outfit']">Kolaborasi kebudayaan lintas batas menampilkan atraksi Barongsai Singa Timur bersanding dengan Ronggeng Banyumasan.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 13 -->
+                    <div class="activity-card group bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 flex flex-col transition duration-300" 
+                         data-category="Lomba & Olahraga" data-day="Hari 4" data-aos="fade-up">
+                        <div class="h-52 overflow-hidden relative">
+                            <img src="assets/img/gallery/3.png" alt="Benteng Desa Adventure" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                            <div class="absolute bottom-4 left-4 bg-amber-600 text-white px-3.5 py-1 rounded-full text-xs font-bold shadow-sm">
+                                Lomba & Olahraga
+                            </div>
+                        </div>
+                        <div class="p-6 md:p-8 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center gap-2 mb-2.5">
+                                    <span class="text-xs font-bold text-astagina-orange bg-orange-50 px-2.5 py-1 rounded-md">Hari 4</span>
+                                    <span class="text-xs text-gray-400 font-medium">08.00 - 11.00 WIB</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-3 font-['Playfair_Display']">Benteng Desa Adventure</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed font-['Outfit']">Jelajah alam petualangan menyusuri rute bersejarah benteng alam Panusupan, menguji ketangkasan dan kekompakan tim.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 14 -->
+                    <div class="activity-card group bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 flex flex-col transition duration-300" 
+                         data-category="Kesenian Rakyat" data-day="Hari 4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="h-52 overflow-hidden relative">
+                            <img src="assets/img/gallery/penari_topeng.png" alt="Pentas Seni Kuda Lumping" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                            <div class="absolute bottom-4 left-4 bg-astagina-brown text-white px-3.5 py-1 rounded-full text-xs font-bold shadow-sm">
+                                Kesenian Rakyat
+                            </div>
+                        </div>
+                        <div class="p-6 md:p-8 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center gap-2 mb-2.5">
+                                    <span class="text-xs font-bold text-astagina-orange bg-orange-50 px-2.5 py-1 rounded-md">Hari 4</span>
+                                    <span class="text-xs text-gray-400 font-medium">08.00 - 11.00 WIB</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-3 font-['Playfair_Display']">Pentas Seni Kuda Lumping (Pagi)</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed font-['Outfit']">Penampilan ebeg babak pagi hari oleh paguyuban kesenian cilik guna meregenerasi kecintaan anak muda terhadap warisan leluhur.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 15 -->
+                    <div class="activity-card group bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 flex flex-col transition duration-300" 
+                         data-category="Tradisi Adat" data-day="Hari 4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="h-52 overflow-hidden relative">
+                            <img src="assets/img/gallery/about_festival.png" alt="Sholawat, Pengajian, dan Pentasarufan Zakat" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                            <div class="absolute bottom-4 left-4 bg-astagina-green text-white px-3.5 py-1 rounded-full text-xs font-bold shadow-sm">
+                                Tradisi Adat
+                            </div>
+                        </div>
+                        <div class="p-6 md:p-8 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center gap-2 mb-2.5">
+                                    <span class="text-xs font-bold text-astagina-orange bg-orange-50 px-2.5 py-1 rounded-md">Hari 4</span>
+                                    <span class="text-xs text-gray-400 font-medium">08.00 - 11.00 WIB</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-3 font-['Playfair_Display']">Sholawat & Pentasarufan Zakat</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed font-['Outfit']">Acara keagamaan pengajian rohani, lantunan sholawat nabi, serta penyerahan santunan zakat bagi anak-anak yatim piatu.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 16 -->
+                    <div class="activity-card group bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 flex flex-col transition duration-300" 
+                         data-category="Lomba & Olahraga" data-day="Hari 5" data-aos="fade-up">
+                        <div class="h-52 overflow-hidden relative">
+                            <img src="assets/img/gallery/3.png" alt="Lomba Permainan Tradisional" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                            <div class="absolute bottom-4 left-4 bg-amber-600 text-white px-3.5 py-1 rounded-full text-xs font-bold shadow-sm">
+                                Lomba & Olahraga
+                            </div>
+                        </div>
+                        <div class="p-6 md:p-8 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center gap-2 mb-2.5">
+                                    <span class="text-xs font-bold text-astagina-orange bg-orange-50 px-2.5 py-1 rounded-md">Hari 5</span>
+                                    <span class="text-xs text-gray-400 font-medium">07.30 - 11.00 WIB</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-3 font-['Playfair_Display']">Lomba Permainan Tradisional (Sesi Pagi)</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed font-['Outfit']">Perlombaan seru egrang bambu, bakiak kolosal, dan tarik tambang antar rukun warga guna melestarikan olahraga tradisional.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 17 -->
+                    <div class="activity-card group bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 flex flex-col transition duration-300" 
+                         data-category="Lomba & Olahraga" data-day="Hari 5" data-aos="fade-up" data-aos-delay="100">
+                        <div class="h-52 overflow-hidden relative">
+                            <img src="assets/img/gallery/2.png" alt="Lomba Permainan Tradisional" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                            <div class="absolute bottom-4 left-4 bg-amber-600 text-white px-3.5 py-1 rounded-full text-xs font-bold shadow-sm">
+                                Lomba & Olahraga
+                            </div>
+                        </div>
+                        <div class="p-6 md:p-8 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center gap-2 mb-2.5">
+                                    <span class="text-xs font-bold text-astagina-orange bg-orange-50 px-2.5 py-1 rounded-md">Hari 5</span>
+                                    <span class="text-xs text-gray-400 font-medium">13.30 - 16.30 WIB</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-3 font-['Playfair_Display']">Lomba Permainan Tradisional (Sesi Siang)</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed font-['Outfit']">Kelanjutan babak final lomba permainan tradisional dan demonstrasi memahat mainan bambu oleh para pengrajin lokal.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 18 -->
+                    <div class="activity-card group bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 flex flex-col transition duration-300" 
+                         data-category="Panggung Musik" data-day="Hari 5" data-aos="fade-up" data-aos-delay="200">
+                        <div class="h-52 overflow-hidden relative">
+                            <img src="assets/img/gallery/musik_etnik.png" alt="Campursari" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                            <div class="absolute bottom-4 left-4 bg-[#ec4899] text-white px-3.5 py-1 rounded-full text-xs font-bold shadow-sm">
+                                Panggung Musik
+                            </div>
+                        </div>
+                        <div class="p-6 md:p-8 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center gap-2 mb-2.5">
+                                    <span class="text-xs font-bold text-astagina-orange bg-orange-50 px-2.5 py-1 rounded-md">Hari 5</span>
+                                    <span class="text-xs text-gray-400 font-medium">19.30 - 23.30 WIB</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-3 font-['Playfair_Display']">Campursari Wong Tani</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed font-['Outfit']">Panggung malam keakraban menampilkan lagu campursari syahdu yang mengajak seluruh warga menari bersama di bawah bintang.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 19 -->
+                    <div class="activity-card group bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 flex flex-col transition duration-300" 
+                         data-category="Tradisi Adat" data-day="Hari 6" data-aos="fade-up">
+                        <div class="h-52 overflow-hidden relative">
+                            <img src="assets/img/gallery/1.png" alt="Ruwat Bumi" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                            <div class="absolute bottom-4 left-4 bg-astagina-green text-white px-3.5 py-1 rounded-full text-xs font-bold shadow-sm">
+                                Tradisi Adat
+                            </div>
+                        </div>
+                        <div class="p-6 md:p-8 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center gap-2 mb-2.5">
+                                    <span class="text-xs font-bold text-astagina-orange bg-orange-50 px-2.5 py-1 rounded-md">Hari 6</span>
+                                    <span class="text-xs text-gray-400 font-medium">09.00 - 15.00 WIB</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-3 font-['Playfair_Display']">Ruwat Bumi (Sedekah Desa)</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed font-['Outfit']">Prosesi adat sakral ruwatan bumi sebagai simbol penyucian wilayah dan permohonan keselamatan kepada Tuhan Yang Maha Esa dipimpin sesepuh adat.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 20 -->
+                    <div class="activity-card group bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 flex flex-col transition duration-300" 
+                         data-category="Seni Dalang" data-day="Hari 6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="h-52 overflow-hidden relative">
+                            <img src="assets/img/gallery/wayang.png" alt="Pagelaran Wayang" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                            <div class="absolute bottom-4 left-4 bg-astagina-orange text-white px-3.5 py-1 rounded-full text-xs font-bold shadow-sm">
+                                Seni Dalang
+                            </div>
+                        </div>
+                        <div class="p-6 md:p-8 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center gap-2 mb-2.5">
+                                    <span class="text-xs font-bold text-astagina-orange bg-orange-50 px-2.5 py-1 rounded-md">Hari 6</span>
+                                    <span class="text-xs text-gray-400 font-medium">20.00 - 04.00 WIB</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-3 font-['Playfair_Display']">Pagelaran Wayang Kulit</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed font-['Outfit']">Pergelaran wayang kulit semalam suntuk dibawakan secara spektakuler oleh Ki Dalang Kukuh Bayu Aji, menutup festival secara agung.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Empty State -->
+                <div id="empty-state" class="hidden text-center py-20 bg-white rounded-3xl border border-gray-100 shadow-sm mt-8">
+                    <div class="w-16 h-16 bg-orange-50 text-astagina-orange rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Kegiatan Tidak Ditemukan</h3>
+                    <p class="text-gray-500 max-w-md mx-auto">Tidak ada kegiatan yang sesuai dengan perpaduan filter kategori dan hari yang Anda pilih. Silakan ganti kriteria filter Anda.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-neutral-900 text-neutral-400 pt-20 pb-10 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-[0.02]" style="background-image: radial-gradient(circle at 10% 20%, var(--astagina-green) 1px, transparent 1px); background-size: 20px 20px;"></div>
+        <div class="container-custom relative z-10 px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-16 border-b border-neutral-800">
+                <div class="lg:col-span-1.5" data-aos="fade-up">
+                    <a href="index.html" class="flex items-center gap-3 mb-6">
+                        <img src="assets/img/logo/logo.png" alt="Logo Astagina" class="w-12 h-12 object-contain">
+                        <div class="flex flex-col text-left">
+                            <span class="font-extrabold text-white leading-tight text-lg tracking-wider font-['Playfair_Display']">ASTAGINA</span>
+                            <span class="text-xs text-astagina-orange leading-tight font-medium font-['Outfit']">Pokdarwis Desa Panusupan</span>
+                        </div>
+                    </a>
+                    <p class="text-neutral-400 text-sm leading-relaxed mb-6 font-['Outfit'] text-justify">
+                    Kelompok Sadar Wisata pendorong kemajuan seni budaya, pengembangan destinasi wisata kreatif, dan pemberdayaan UMKM lokal secara terpadu dan berkelanjutan.
+                </p>
+                                                                    <div class="flex flex-wrap gap-3">
+                    <a href="index.html" class="w-10 h-10 rounded-xl bg-neutral-800/80 border border-neutral-700/50 text-[#EAB308] hover:bg-black hover:border-neutral-600 hover:text-white hover:-translate-y-1 hover:shadow-[0_4px_12px_rgba(0,0,0,0.5)] flex items-center justify-center transition-all duration-300" title="Twitter / X">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="index.html" class="w-10 h-10 rounded-xl bg-neutral-800/80 border border-neutral-700/50 text-[#EAB308] hover:bg-[#1877F2] hover:border-transparent hover:text-white hover:-translate-y-1 hover:shadow-[0_4px_12px_rgba(24,119,242,0.3)] flex items-center justify-center transition-all duration-300" title="Facebook">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.8z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/lembah_trenggulun?igsh=YjVjOGJtZWR2eXBn" target="_blank" class="w-10 h-10 rounded-xl bg-neutral-800/80 border border-neutral-700/50 text-[#EAB308] hover:bg-gradient-to-tr hover:from-[#f9ce34] hover:via-[#ee2a7b] hover:to-[#6228d7] hover:border-transparent hover:text-white hover:-translate-y-1 hover:shadow-[0_4px_12px_rgba(238,42,123,0.3)] flex items-center justify-center transition-all duration-300" title="Instagram">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    </a>
+                    <a href="https://youtube.com/@lembahtrenggulun?si=hTncXGnLyuHyR3To" target="_blank" class="w-10 h-10 rounded-xl bg-neutral-800/80 border border-neutral-700/50 text-[#EAB308] hover:bg-[#FF0000] hover:border-transparent hover:text-white hover:-translate-y-1 hover:shadow-[0_4px_12px_rgba(255,0,0,0.3)] flex items-center justify-center transition-all duration-300" title="YouTube">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.108C19.53 3.5 12 3.5 12 3.5s-7.53 0-9.388.555A3.002 3.002 0 0 0 .502 6.163C0 8.07 0 12 0 12s0 3.93.502 5.837a3.003 3.003 0 0 0 2.11 2.108C4.47 20.5 12 20.5 12 20.5s7.53 0 9.388-.555a3.003 3.003 0 0 0 2.11-2.108C24 15.93 24 12 24 12s0-3.93-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@lembah_trenggulun?_r=1&_t=ZS-96gOiZlgtOf" target="_blank" class="w-10 h-10 rounded-xl bg-neutral-800/80 border border-neutral-700/50 text-[#EAB308] hover:bg-black hover:border-[#FE2C55] hover:text-white hover:-translate-y-1 hover:shadow-[0_4px_12px_rgba(254,44,85,0.3)] flex items-center justify-center transition-all duration-300" title="TikTok">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.02 1.59 4.23.99 1.25 2.37 2.16 3.91 2.53v3.96c-1.88-.08-3.7-.75-5.22-1.89-.55-.41-1.04-.9-1.46-1.45v6.52c.08 2.29-1.02 4.54-2.94 5.79-1.92 1.25-4.48 1.48-6.6.61-2.12-.87-3.72-2.87-4.14-5.14-.42-2.27.35-4.66 2-6.19 1.65-1.53 4.02-2.09 6.18-1.46V8.2c-1.63-.38-3.37-.17-4.87.59-1.5 1.05-2.42 2.82-2.43 4.67-.01 1.85.91 3.62 2.41 4.67 1.5.76 3.24.97 4.87.59 1.63-.38 2.91-1.55 3.39-3.15.08-.28.11-.57.11-.86V.02z"/></svg>
+                    </a>
+                </div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <h4 class="text-white font-bold text-base mb-6 font-['Playfair_Display']">Tautan Pintas</h4>
+                    <ul class="flex flex-col gap-3 text-sm font-['Outfit']">
+                        <li><a href="index.html" class="hover:text-[#EAB308] transition-colors duration-300">Beranda</a></li>
+                        <li><a href="tentang.html" class="hover:text-[#EAB308] transition-colors duration-300">Tentang Kami</a></li>
+                        <li><a href="kegiatan.html" class="hover:text-[#EAB308] transition-colors duration-300">Kegiatan</a></li>
+                        <li><a href="jadwal.html" class="hover:text-[#EAB308] transition-colors duration-300">Jadwal Acara</a></li>
+                        <li><a href="pengisi.html" class="text-white hover:text-[#EAB308] transition-colors duration-300 font-semibold">Pengisi Acara</a></li>
+                    </ul>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <h4 class="text-white font-bold text-base mb-6 font-['Playfair_Display']">Layanan Wisata</h4>
+                    <ul class="flex flex-col gap-3 text-sm font-['Outfit']">
+                        <li><a href="stand.html" class="hover:text-[#EAB308] transition-colors duration-300">Sewa Stan UMKM</a></li>
+                        <li><a href="merchandise.html" class="hover:text-[#EAB308] transition-colors duration-300">Merchandise Festival</a></li>
+                        <li><a href="homestay.html" class="hover:text-[#EAB308] transition-colors duration-300">Pemesanan Homestay</a></li>
+                        <li><a href="galeri.html" class="hover:text-[#EAB308] transition-colors duration-300">Galeri Foto</a></li>
+                        <li><a href="lokasi.html" class="hover:text-[#EAB308] transition-colors duration-300">Peta Lokasi</a></li>
+                    </ul>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <h4 class="text-white font-bold text-base mb-6 font-['Playfair_Display']">Kontak & Sekretariat</h4>
+                    <ul class="flex flex-col gap-4 text-sm font-['Outfit']">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-astagina-orange shrink-0 mt-0.5"></i>
+                            <span>Balai Desa Panusupan, Kec. Cilongok, Kabupaten Banyumas, Jawa Tengah 53162</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-astagina-orange shrink-0"></i>
+                            <a href="https://wa.me/6281558777210" target="_blank" class="hover:text-[#EAB308] transition-all">+62 815-5877-7210</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="mail" class="w-5 h-5 text-astagina-orange shrink-0"></i>
+                            <a href="mailto:info@astaginafest.com" class="hover:text-[#EAB308] transition-all">info@astaginafest.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col sm:flex-row justify-between items-center pt-8 text-xs text-neutral-500 font-['Outfit']">
+                <p class="mb-4 sm:mb-0">&copy; 2026 Astagina Desa Panusupan. Hak Cipta Dilindungi Undang-Undang.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-neutral-300">Syarat & Ketentuan</a>
+                    <a href="#" class="hover:text-neutral-300">Kebijakan Privasi</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lucide Icons and Scripts -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Init Lucide
+        lucide.createIcons();
+        
+        // Init AOS
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Mobile menu logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.classList.add('flex');
+                document.body.classList.add('overflow-hidden');
+            });
+        }
+
+        if (mobileMenuClose && mobileMenu) {
+            mobileMenuClose.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+                document.body.classList.remove('overflow-hidden');
+            });
+        }
+
+        // Reactive Filtering Logic
+        let activeDay = 'Semua';
+
+        function filterDay(day, buttonEl) {
+            // Update active state in UI
+            const buttons = document.querySelectorAll('#day-filters button');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            buttonEl.classList.add('active');
+
+            activeDay = day;
+            applyFilters();
+        }
+
+        function applyFilters() {
+            const cards = document.querySelectorAll('.activity-card');
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                const dayMatch = (activeDay === 'Semua' || card.getAttribute('data-day') === activeDay);
+
+                if (dayMatch) {
+                    card.style.display = 'flex';
+                    // Retrigger simple scale animation for polished transition
+                    card.style.opacity = '1';
+                    card.style.transform = 'scale(1)';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                    card.style.opacity = '0';
+                    card.style.transform = 'scale(0.95)';
+                }
+            });
+
+            // Show or hide empty state
+            const emptyState = document.getElementById('empty-state');
+            if (visibleCount === 0) {
+                emptyState.classList.remove('hidden');
+            } else {
+                emptyState.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
