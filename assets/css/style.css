@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  --color-green: #4f7942;
-  --color-green-light: #6b9e59;
-  --color-green-dark: #3a5c31;
+  --color-green: #ACB544;
+  --color-green-light: #7AB634;
+  --color-green-dark: #1D6D46;
   --color-brown: #8b5a2b;
   --color-brown-light: #a67446;
   --color-cream: #fbf9f6;
   --color-orange: #cc5526;
   --color-text-main: #333333;
   --color-text-muted: #666666;
+  --color-orange-bright: #Eb8123;
+  --color-blue-light: #58B5D7;
+  --color-blue: #1D719E;
 }
 
 html {
