@@ -77,8 +77,8 @@ document.addEventListener('DOMContentLoaded', () => {
         new Swiper('.gallery-swiper', {
             slidesPerView: 1,
             spaceBetween: 16,
-            loop: true,
-            loopedSlides: 12,
+            loop: false,
+            rewind: true,
             watchSlidesProgress: true,
             autoplay: {
                 delay: 3000,
