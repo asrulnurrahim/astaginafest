@@ -103,7 +103,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // === PREMIUM LIGHTBOX IMAGE PREVIEW MODAL ===
     // Select all potential previewable images (Gallery & Merchandise)
-    const previewableImages = document.querySelectorAll('.img-wrapper img, .grid-cols-2 img, .lightbox-link img');
+    const previewableImages = Array.from(document.querySelectorAll('.img-wrapper img, .grid-cols-2 img, .grid-cols-3 img, .lightbox-link img'))
+        .filter(img => !img.closest('[onclick]'));
     
     if (previewableImages.length > 0) {
         // Create Lightbox Container DOM Elements
