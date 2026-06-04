@@ -1,0 +1,8 @@
+# robots.txt for Astagina Fest
+# Dedicated to Festival Tani & Budaya Lokal Banyumas
+
+User-agent: *
+Allow: /
+
+# Sitemap Index Link for Google Search Console
+Sitemap: https://astaginafest.com/sitemap.xml
